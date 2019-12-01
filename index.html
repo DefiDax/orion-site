@@ -1,39 +1,220 @@
 <!DOCTYPE html>
-<html lang="en"></html>
-<head>
-  <meta charset="UTF-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
-  <title>Document</title>
-  <link rel="stylesheet" type="text/css" href="css/style.css"/>
-</head>
-<body>
-  <header class="header">
-    <div class="header__content">
-      <div class="header__left"><a class="logo" href="/"><img src="img/logo.png" alt="alt"/></a></div>
-      <nav class="header__right">
-        <ul class="navbar">
-          <li class="navbar__item"><a class="navbar__link" href="#">Page 0</a></li>
-          <li class="navbar__item"><a class="navbar__link" href="#">Page 1</a></li>
-          <li class="navbar__item"><a class="navbar__link" href="#">Page 2</a></li>
-          <li class="navbar__item"><a class="navbar__link" href="#">Page 3</a></li>
-          <li class="navbar__item"><a class="navbar__link" href="#">Page 4</a></li>
-        </ul>
-      </nav>
-    </div>
-  </header>
-  <main class="main_content">
-    <div class="container_center">
-      <div class="grid">
-        <div class="grid__item">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur, in.</div>
-        <div class="grid__item">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo numquam sequi officiis. Quia sed modi voluptatem, aut rem possimus at ipsa nobis iure non corporis nulla suscipit praesentium quos numquam quasi magni delectus eius illo, harum hic id! Laboriosam culpa recusandae nesciunt ab natus molestiae porro reiciendis, eveniet architecto temporibus!</div>
-        <div class="grid__item">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nesciunt fugiat, pariatur, explicabo ut quidem deleniti velit sed error dolor! Voluptates dignissimos consectetur repudiandae ipsam. Iusto, rerum, quam! Corporis, nisi, inventore?</div>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+    <title>ORION</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css?0.8"/>
+  </head>
+  <body>
+    <header class="header">
+      <div class="header__content">
+        <div class="navbar__toggle"></div>
+        <div class="header__left"><a class="logo" href="/"><img src="img/logo.png" alt="ORION"/></a></div>
+        <div class="header__group">
+          <nav class="header__center">
+            <ul class="navbar">
+              <li class="navbar__item"><a class="navbar__link" href="#" data-scroll-to="">About</a></li>
+              <li class="navbar__item"><a class="navbar__link" href="#" data-scroll-to="">Trading Desk</a></li>
+              <li class="navbar__item"><a class="navbar__link" href="#" data-scroll-to="">DeFi Solutions</a></li>
+              <li class="navbar__item"><a class="navbar__link" href="#" data-scroll-to="">Blog</a></li>
+              <li class="navbar__item"><a class="navbar__link" href="#" data-scroll-to="">Contact</a></li>
+            </ul>
+          </nav>
+          <div class="header__right">
+            <div class="lang">
+              <div class="lang__flag"><img src="img/US.svg" alt="United States"/></div>EN
+            </div>
+            <div class="header__action"><a class="btn" href="#">Get in Touch</a></div>
+          </div>
+        </div>
       </div>
-    </div>
-  </main>
-  <footer class="footer">
-    <div class="container_center">
-      <p></p>&copy; 2016 |<i class="fa fa-github" aria-hidden="true">&nbsp;</i><a href="#">View Source</a>
-    </div>
-  </footer>
-</body>
+    </header>
+    <main class="main_content">
+      <!-- begin fScreen-->
+      <section class="fScreen section" id="home">
+        <div class="container_center">
+          <div class="fScreen__content">
+            <div class="fScreen__img"><img src="img/f-img.png" alt=""/></div>
+            <div class="fScreen__descr">
+              <div class="section__name">defi solutions</div>
+              <h1 class="section__title">DeFi is the Future. We’re Already Here</h1>
+              <div class="fScreen__sub">Industry first DeFi solutions centered around our advanced Liquidity Aggregator Protocol</div>
+              <div class="fScreen__action"><a class="btn" href="#">What is Orion?</a><a class="btn btn_primary" href="#">Whitepaper</a></div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- end fScreen-->
+      <!-- begin traiding-->
+      <section class="traiding section" id="traiding">
+        <div class="container_center">
+          <div class="traiding__content">
+            <div class="traiding__img"><img src="img/traiding-img.png" alt="Traiding terminal"/></div>
+            <div class="traiding__descr">
+              <h2 class="section__title">The Only Trading Terminal You Need</h2>
+              <div class="traiding__text"> <b>Orion Terminal </b>seamlessly aggregates bottomless liquidity from <b>all exchanges, </b>centralized + decentralized.</div>
+              <div class="traiding__action"><a class="btn" href="#">Get in Touch</a></div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- end traiding-->
+      <!-- begin features-->
+      <section class="features section" id="features">
+        <div class="container_center">
+          <div class="features__content">
+            <div class="features__left">
+              <div class="section__name">features</div>
+              <h2 class="section__title">The Crypto Market Had Too Many Exchanges & Not Enough Liquidity...<span>Until Now</span></h2>
+              <div class="features__action"><a class="btn" href="#">Get in touch</a></div>
+            </div>
+            <div class="features__right">
+              <div class="features__list">
+                <div class="features__item">
+                  <div class="features__icon"><img src="img/features-1.svg" alt=""/></div>
+                  <div class="features__name">Always Own Your Personal Assets</div>
+                  <div class="features__text">Custody has always been an issue in crypto, until now. Trade with the liquidity</div>
+                </div>
+                <div class="features__item">
+                  <div class="features__icon"><img src="img/features-2.svg" alt=""/></div>
+                  <div class="features__name">Access Liquidity <br>in One Place</div>
+                  <div class="features__text">Orion encompasses the liquidity of all centralized and decentralized exchanges</div>
+                </div>
+                <div class="features__item">
+                  <div class="features__icon"><img src="img/features-3.svg" alt=""/></div>
+                  <div class="features__name">Always Own Your Personal Assets</div>
+                  <div class="features__text">Custody has always been an issue in crypto, until now. Trade with the liquidity</div>
+                </div>
+                <div class="features__item">
+                  <div class="features__icon"><img src="img/features-4.svg" alt=""/></div>
+                  <div class="features__name">Robust Your <br>Trading Tools</div>
+                  <div class="features__text">Embedded within the terminal are intuitive tools that provide you with all of the news</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- end features-->
+      <!-- begin earning-->
+      <section class="earning section" id="earning">
+        <div class="container_center">
+          <div class="earning__content">
+            <div class="earning__img"><img src="img/earning.png" alt=""/></div>
+            <div class="earning__desc">
+              <div class="section__name">how it works</div>
+              <h2 class="section__title">Why Aren’t You Earning Risk-Free Passive Income on Your Assets?</h2>
+              <div class="earning__text">Orion’s shared liquidity pool is the core element of the trade functionality, allowing for trades to take place withouy ever handing over custody of your assets. Liquidity providers that stake assets in the pool will enjoy high-yield, passive income on their digital asset. It’s that simple.</div>
+              <div class="earning__action"><a class="btn" href="#">Get in touch</a></div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- end earning-->
+      <!-- begin product-->
+      <section class="product section" id="product">
+        <div class="container_center">
+          <div class="product__content">
+            <div class="product__descr">
+              <div class="section__name">our products</div>
+              <div class="product__change">
+                <h2 class="section__title">We Are DeFi</h2>
+                <div class="product__text">We’re not just another crypto exchange. We’re an all in one DeFi platform that supplies much needed solutions for businesses and consumers alike.</div>
+              </div>
+              <div class="product__action"><a class="btn" href="#">Get in Touch</a></div>
+            </div>
+            <div class="product__img"><img src="img/products-img.png" alt="Products"/>
+              <div class="product__list">
+                <div class="product__name" data-text="Projects utilize this feature to fulfill large token orders placed by enterprise clients directly from the open market at the best price.">Orion Enterprise Trade</div>
+                <div class="product__name" data-text="Exchanges that lack volume may tap into Orion’s aggregated order books to add immediate liquidity to their exchange.">Orion Liquidity Boost Plugin</div>
+                <div class="product__name" data-text="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores repudiandae ipsam provident eaque beatae alias.">Orion Terminal</div>
+                <div class="product__name" data-text="Allows blockchain projects to quickly build robust dexes with endless, instant liquidity using Orion’s aggregator. ">Orion Blockchain DEX Kit</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- end product-->
+      <!-- begin partners-->
+      <section class="partners section" id="partners">
+        <div class="container_center">
+          <div class="partners__content">
+            <div class="partners__list">
+              <div class="partners__item">
+                <div class="partners__icon"><img src="img/partners-1.svg" alt=""/></div>
+                <div class="partners__name">wanchain</div>
+                <div class="partners__title">Jason Bailey</div>
+                <div class="partners__txt">Jason is the leading blockchain educator in Africa. He is also a writer and crypto contributor</div>
+              </div>
+              <div class="partners__item">
+                <div class="partners__icon"><img src="img/partners-2.png" alt=""/></div>
+                <div class="partners__name">certik</div>
+                <div class="partners__title">Lucy Miller</div>
+                <div class="partners__txt">Lucy is a serial entrepreneur with a background in marketing, mainly focused</div>
+              </div>
+              <div class="partners__item">
+                <div class="partners__icon"><img src="img/partners-2.png" alt=""/></div>
+                <div class="partners__name">certik</div>
+                <div class="partners__title">Lucy Miller</div>
+                <div class="partners__txt">Lucy is a serial entrepreneur with a background in marketing, mainly focused</div>
+              </div>
+              <div class="partners__item">
+                <div class="partners__icon"><img src="img/partners-1.svg" alt=""/></div>
+                <div class="partners__name">wanchain</div>
+                <div class="partners__title">Jason Bailey</div>
+                <div class="partners__txt">Jason is the leading blockchain educator in Africa. He is also a writer and crypto contributor</div>
+              </div>
+            </div>
+            <div class="partners__descr">
+              <div class="section__name">our partners</div>
+              <h2 class="section__title">Partnerships <br>That Matter</h2>
+              <div class="partners__text">Our partners are not just for optics. We’ve hand chosen the very best companies to partner with to further our mission of creating a complete DeFi solution.</div>
+              <div class="partners__action"><a class="btn" href="#">Get in Touch</a></div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- end partners-->
+      <footer class="footer">
+        <div class="footer__content">
+          <div class="footer__top"><a class="logo" href="#"><img src="img/logo.png" alt=""/></a>
+            <div class="lang">
+              <div class="lang__flag"><img src="img/US.svg" alt="United States"/></div>
+            </div>
+            <div class="form form_inline">
+              <input type="text" placeholder="Email"/>
+              <button class="btn" type="submit"> <i class="icon-caret"></i></button>
+            </div>
+            <ul class="soc">
+              <li class="soc__item"><a class="icon-telegram" href="#"></a></li>
+              <li class="soc__item"><a class="icon-bitcoin" href="#"></a></li>
+              <li class="soc__item"><a class="icon-facebook" href="#"></a></li>
+              <li class="soc__item"><a class="icon-github" href="#"></a></li>
+              <li class="soc__item"><a class="icon-linkedin" href="#"></a></li>
+              <li class="soc__item"><a class="icon-youtube" href="#"></a></li>
+              <li class="soc__item"><a class="icon-twitter" href="#"></a></li>
+            </ul>
+          </div>
+          <div class="footer__nav">
+            <ul class="navbar">
+              <li class="navbar__item"><a class="navbar__link" href="#">Home</a></li>
+              <li class="navbar__item"><a class="navbar__link" href="#">About</a></li>
+              <li class="navbar__item"><a class="navbar__link" href="#">Trading desk</a></li>
+              <li class="navbar__item"><a class="navbar__link" href="#">DeFi Solutions</a></li>
+              <li class="navbar__item"><a class="navbar__link" href="#">Blog</a></li>
+              <li class="navbar__item"><a class="navbar__link" href="#">Contact</a></li>
+            </ul>
+          </div>
+          <div class="footer__bottom">
+            <div class="footer__copy">© Orion 2019, All rights reserved.</div><a href="#">Terms & Conditions</a><a href="#">Privacy Policy</a><a href="#">Sales & Refunds</a><a href="#">Legal</a>
+            <div class="footer__dev">made by <a href="#" target="_blank">roobinium</a></div>
+          </div>
+        </div>
+      </footer>
+    </main>
+    <script src="js/jquery.js"></script>
+    <script src="js/function.js?0.8"></script>
+  </body>
+</html>

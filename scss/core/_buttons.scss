@@ -1,43 +1,57 @@
 // Style for button and pseudo button for input and link
+
 .btn {
 	color: $btn_default_text_color;
 	font-family: $main_font_family;
-	font-size: 16px;
-	font-weight: 300;
-	padding: 5px 15px 7px;
 	border: none;
 	outline: none;
 	text-decoration: none;
 	display: inline-block;
-	background-color: $btn_default_bg_color;
+	cursor: pointer;
 	text-align: center;
 	max-width: 100%;
-	cursor: pointer;
-	border-radius: 5px;
-	transition: all 0.3s;
-	text-decoration: none;
+	transition: box-shadow 0.3s;
+	position: relative;
+	z-index: 1;
+	overflow: hidden;
+
+	padding: 0.8em 1.5em;
+
+	color: #ffffff;
+	font-size: 1em;
+	font-weight: 600;
+	line-height: 1.5;
+	box-shadow: 0 0.5em 0.5em -0.25em rgba(0, 187, 255, 0.12), 0 1em 1.5em rgba(0, 187, 255, 0.24), 0 0.125em 0.25em -0.062em rgba(10, 70, 82, 0.12), 0 0 0.063em rgba(0, 187, 255, 0.24);
+	border-radius: 1.5em;
+	background-color: transparent;
+
+	&:before {
+		content: '';
+		position: absolute;
+		width: 100%;
+		left: 0;
+		top: 0;
+		bottom: 0;
+		background-image: linear-gradient(135deg, #00ffaa 0%, #00bbff 53%, #4579f5 100%);
+		z-index: -1;
+		transition: 0.3s;
+	}
+
 	&:hover {
-		background-color: #fff;
-		color: #000;
-		text-decoration: none;
-	}
-	&:focus,&:active {
-		background-color: transparentize(#fff, .2);
-		color: #000;
-	}
-	@each $status_el, $color_bg in $el_colors {
-		&_#{$status_el} {
-			background-color: $color_bg;
-			border-color: $color_bg;
-			color: $btn_contrast_text_color;
-			&:hover {
-				background-color: darken($color_bg, 7%);
-				color: $btn_contrast_text_color;
-			}
-			&:focus,&:active {
-				background-color: darken($color_bg, 10%);
-				color: $btn_contrast_text_color;
-			}
+		&:before {
+			width: 130%;
 		}
-	}	
+	}
+
+	&:active {
+		box-shadow: none;
+	}
+
+	&_primary {
+		box-shadow: 0 0.5em 0.5em -0.25em rgba(0, 187, 255, 0.06), 0 1em 1.5em rgba(0, 187, 255, 0.12), 0 0.125em 0.25em -0.062em rgba(27, 10, 82, 0.06), 0 0 0.063em rgba(0, 187, 255, 0.12), inset 0 0.125em 0.375em rgba(0, 187, 255, 0.4);
+		// border-radius: 1.5em;
+		&:before {
+			background-image: linear-gradient(135deg, #33334b 0%, #27273e 50%, #202036 100%);
+		}
+	}
 }
