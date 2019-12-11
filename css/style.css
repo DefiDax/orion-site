@@ -1768,4 +1768,116 @@ input[type=checkbox]:disabled:checked:before, input[type=checkbox]:disabled:inde
       .soc__item {
         margin-right: 0; } }
 
+.team__list {
+  margin: 0 -1em;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin-bottom: 5em; }
+
+.team__item {
+  -webkit-box-shadow: 0 0.5em 0.5em -0.25em rgba(20, 16, 41, 0.06), 0 0.125em 0.25em -0.062em rgba(20, 16, 41, 0.06), 0 0 0.063em rgba(20, 16, 41, 0.12);
+  box-shadow: 0 0.5em 0.5em -0.25em rgba(20, 16, 41, 0.06), 0 0.125em 0.25em -0.062em rgba(20, 16, 41, 0.06), 0 0 0.063em rgba(20, 16, 41, 0.12);
+  border-radius: 1.5em;
+  background-color: #ffffff;
+  padding: 1em 0.9em 1em 1em;
+  margin: 1em;
+  width: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column; }
+  @media (min-width: 768px) {
+    .team__item {
+      width: calc(33.3% - 2em); } }
+
+.team__top {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 1em; }
+
+.team__left {
+  -webkit-box-ordinal-group: 2;
+  -webkit-order: 1;
+  -ms-flex-order: 1;
+  order: 1;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1; }
+
+.team__name {
+  font-weight: 900;
+  text-transform: uppercase;
+  margin-bottom: 0.4em; }
+
+.team__exp {
+  font-size: 0.7em;
+  text-transform: uppercase;
+  color: rgba(20, 16, 41, 0.6);
+  max-width: 11em; }
+
+.team__img {
+  -webkit-box-ordinal-group: 3;
+  -webkit-order: 2;
+  -ms-flex-order: 2;
+  order: 2;
+  -webkit-box-flex: 0;
+  -webkit-flex: none;
+  -ms-flex: none;
+  flex: none;
+  width: 30%;
+  border-radius: 50%;
+  overflow: hidden; }
+  @media (min-width: 768px) {
+    .team__img {
+      margin-left: 2em; } }
+  .team__img img {
+    display: block; }
+
+.team__descr {
+  margin-bottom: 20px;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  color: rgba(20, 16, 41, 0.6);
+  font-size: 0.875em;
+  font-weight: 500;
+  line-height: 1.71; }
+
+.team__bottom {
+  margin-top: 0.3em; }
+
+.team__more {
+  color: #00bbff;
+  font-size: 0.813em;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  line-height: 1.85;
+  text-transform: uppercase;
+  text-decoration: none;
+  display: inline-block; }
+  .team__more:after {
+    content: '';
+    width: 0;
+    border-bottom: 0.1em solid;
+    -webkit-transition: width 0.3s;
+    -o-transition: width 0.3s;
+    transition: width 0.3s;
+    display: block; }
+  .team__more:hover:after {
+    width: 100%; }
+
 /*# sourceMappingURL=style.css.map */

@@ -1,0 +1,90 @@
+-var version = '0.9';
+<!DOCTYPE html>
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        meta(http-equiv="X-UA-Compatible", content="ie=edge")
+        title ORION
+
+        link(rel="stylesheet", type="text/css", href="css/style.css?"+version+"")
+    body
+        header.header
+            .header__content
+                .navbar__toggle
+                .header__left
+                    a.logo(href="/")
+                        img(src="img/logo.png", alt="ORION")
+                .header__group
+                    nav.header__center
+                        ul.navbar
+                            -var nav = ['About', 'Trading Desk', 'DeFi Solutions', 'Blog', 'Contact'];
+                            each value in nav
+                                li.navbar__item
+                                    a.navbar__link(href="#" data-scroll-to="")= value
+                    .header__right
+                        .lang
+                            .lang__flag
+                                img(src="img/US.svg", alt="United States")
+                            |EN
+                        .header__action
+                            a.btn(href="#") Get in Touch
+
+        main.main_content
+            block content
+
+        footer.footer
+            .footer__content
+                .footer__top
+                    a.logo(href="#")
+                        img(src="img/logo.png", alt="")
+                    .lang
+                        .lang__flag
+                            img(src="img/US.svg", alt="United States")
+                    .form.form_inline
+                        input(type="text" placeholder="Email")
+                        button.btn(type="submit") 
+                            i.icon-caret
+
+                    ul.soc
+                        li.soc__item
+                            a.icon-telegram(href="#")
+                        li.soc__item
+                            a.icon-bitcoin(href="#")
+                        li.soc__item
+                            a.icon-facebook(href="#")
+                        li.soc__item
+                            a.icon-github(href="#")
+                        li.soc__item
+                            a.icon-linkedin(href="#")
+                        li.soc__item
+                            a.icon-youtube(href="#")
+                        li.soc__item
+                            a.icon-twitter(href="#")
+
+                .footer__nav
+                    ul.navbar
+                        li.navbar__item
+                            a.navbar__link(href="#") Home
+                        li.navbar__item
+                            a.navbar__link(href="#") About
+                        li.navbar__item
+                            a.navbar__link(href="#") Trading desk
+                        li.navbar__item
+                            a.navbar__link(href="#") DeFi Solutions
+                        li.navbar__item
+                            a.navbar__link(href="#") Blog
+                        li.navbar__item
+                            a.navbar__link(href="#") Contact
+
+                .footer__bottom
+                    .footer__copy © Orion 2019, All rights reserved.
+                    a(href="#") Terms & Conditions
+                    a(href="#") Privacy Policy
+                    a(href="#") Sales & Refunds
+                    a(href="#") Legal
+                    .footer__dev made by 
+                        a(href="#", target="_blank") roobinium
+
+    script(src="js/jquery.js")
+    script(src="js/function.js?"+version+"")

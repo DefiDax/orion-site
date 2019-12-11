@@ -904,3 +904,105 @@
         }
     }
 }
+
+.team {
+    &__list {
+        margin: 0 -1em;
+        display: flex;
+        flex-wrap: wrap;
+        margin-bottom: 5em;
+    }
+
+    &__item {
+        box-shadow: 0 0.5em 0.5em -0.25em rgba(20, 16, 41, 0.06), 0 0.125em 0.25em -0.062em rgba(20, 16, 41, 0.06), 0 0 0.063em rgba(20, 16, 41, 0.12);
+        border-radius: 1.5em;
+        background-color: #ffffff;
+        padding: 1em 0.9em 1em 1em;
+        margin: 1em;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+
+        @media (min-width: 768px) {
+            width: calc(33.3% - 2em);
+        }
+    }
+
+    &__top {
+        display: flex;
+        margin-bottom: 1em;
+    }
+
+    &__left {
+        order: 1;
+        flex-grow: 1;
+    }
+
+    &__name {
+        font-weight: 900;
+        text-transform: uppercase;
+        margin-bottom: 0.4em;
+    }
+
+    &__exp {
+        font-size: 0.7em;
+        text-transform: uppercase;
+        color: rgba(20, 16, 41, 0.6);
+        max-width: 11em;
+    }
+
+    &__img {
+        order: 2;
+        flex: none;
+        width: 30%;
+        border-radius: 50%;
+        overflow: hidden;
+
+        @media (min-width: 768px) {
+            margin-left: 2em;
+        }
+
+        img {
+            display: block;
+        }
+    }
+
+    &__descr {
+        margin-bottom: 20px;
+        flex-grow: 1;
+        color: rgba(20, 16, 41, 0.6);
+        font-size: 0.875em;
+        font-weight: 500;
+        line-height: 1.71;
+    }
+
+    &__bottom {
+        margin-top: 0.3em;
+    }
+
+    &__more {
+        color: #00bbff;
+        font-size: 0.813em;
+        font-weight: 600;
+        letter-spacing: 0.06em;
+        line-height: 1.85;
+        text-transform: uppercase;
+        text-decoration: none;
+        display: inline-block;
+
+        &:after {
+            content: '';
+            width: 0;
+            border-bottom: 0.1em solid;
+            transition: width 0.3s;
+            display: block;
+        }
+
+        &:hover {
+            &:after {
+                width: 100%;
+            }
+        }
+    }
+
+}
