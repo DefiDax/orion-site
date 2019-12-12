@@ -40,6 +40,17 @@ $(document).ready(function() {
 
     checkOnResize();
 
+    $('.team__more').on('click', function() {
+        var wrap = $(this).closest('.team__item');
+        wrap.toggleClass('more');
+
+        if (wrap.hasClass('more')) {
+            $(this).text($(this).data('less'));
+        } else {
+            $(this).text($(this).data('more'));
+        }
+    })
+
 });
 
 $(window).resize(function(event) {

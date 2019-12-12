@@ -923,6 +923,20 @@
         display: flex;
         flex-direction: column;
 
+        &.more {
+            // align-self: flex-start;
+
+            .team {
+                &__short {
+                    display: none;
+                }
+
+                &__full {
+                    display: block;
+                }
+            }
+        }
+
         @media (min-width: 768px) {
             width: calc(33.3% - 2em);
         }
@@ -936,6 +950,10 @@
     &__left {
         order: 1;
         flex-grow: 1;
+        display: flex;
+        flex-direction: column;
+        // justify-content: flex-start;
+        align-items: flex-start;
     }
 
     &__name {
@@ -949,6 +967,8 @@
         text-transform: uppercase;
         color: rgba(20, 16, 41, 0.6);
         max-width: 11em;
+        margin-bottom: 0.5em;
+        flex-grow: 1;
     }
 
     &__img {
@@ -957,6 +977,7 @@
         width: 30%;
         border-radius: 50%;
         overflow: hidden;
+        box-shadow: 0 0.5em 0.5em -0.25em rgba(20, 16, 41, 0.06), 0 0.125em 0.25em -0.062em rgba(20, 16, 41, 0.06), 0 0 0.063em rgba(20, 16, 41, 0.12);
 
         @media (min-width: 768px) {
             margin-left: 2em;
@@ -967,13 +988,18 @@
         }
     }
 
-    &__descr {
+    &__full,
+    &__short {
         margin-bottom: 20px;
         flex-grow: 1;
         color: rgba(20, 16, 41, 0.6);
         font-size: 0.875em;
         font-weight: 500;
         line-height: 1.71;
+    }
+
+    &__full {
+        display: none;
     }
 
     &__bottom {
@@ -1002,6 +1028,15 @@
             &:after {
                 width: 100%;
             }
+        }
+    }
+
+    .icon-linkedin {
+        text-decoration: none;
+        color: darken(#00bbff, 20%);
+
+        &:hover {
+            color: #00bbff;
         }
     }
 
