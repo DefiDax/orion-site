@@ -1777,6 +1777,10 @@ input[type=checkbox]:disabled:checked:before, input[type=checkbox]:disabled:inde
   -webkit-flex-wrap: wrap;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
+  -webkit-box-align: start;
+  -webkit-align-items: flex-start;
+  -ms-flex-align: start;
+  align-items: flex-start;
   margin-bottom: 5em; }
 
 .team__item {
@@ -1802,7 +1806,8 @@ input[type=checkbox]:disabled:checked:before, input[type=checkbox]:disabled:inde
     display: block; }
   @media (min-width: 768px) {
     .team__item {
-      width: calc(33.3% - 2em); } }
+      width: calc(33.3% - 2em);
+      min-height: 19em; } }
 
 .team__top {
   display: -webkit-box;

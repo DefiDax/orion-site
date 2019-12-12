@@ -910,6 +910,7 @@
         margin: 0 -1em;
         display: flex;
         flex-wrap: wrap;
+        align-items: flex-start;
         margin-bottom: 5em;
     }
 
@@ -939,6 +940,7 @@
 
         @media (min-width: 768px) {
             width: calc(33.3% - 2em);
+            min-height: 19em;
         }
     }
 
