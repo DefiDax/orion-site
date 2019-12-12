@@ -1147,6 +1147,10 @@ input[type=checkbox]:disabled:checked:before, input[type=checkbox]:disabled:inde
         -webkit-order: 0;
         -ms-flex-order: 0;
         order: 0; } }
+    @media (max-width: 767px) {
+      .fScreen__descr_noimg {
+        padding-top: 6.2em;
+        margin-bottom: -5.5em; } }
   .fScreen__sub {
     color: rgba(224, 224, 255, 0.6);
     font-size: 1.25em;

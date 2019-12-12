@@ -147,6 +147,13 @@
             max-width: 45%;
             order: 0;
         }
+
+        @media (max-width: 767px) {
+            &_noimg {
+                padding-top: 6.2em;
+                margin-bottom: -5.5em;
+            }
+        }
     }
 
     &__sub {
