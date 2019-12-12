@@ -1807,7 +1807,7 @@ input[type=checkbox]:disabled:checked:before, input[type=checkbox]:disabled:inde
   @media (min-width: 768px) {
     .team__item {
       width: calc(33.3% - 2em);
-      min-height: 19em; } }
+      min-height: 20em; } }
 
 .team__top {
   display: -webkit-box;
