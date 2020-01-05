@@ -1153,8 +1153,8 @@
 
                 &-selection {
                     padding: 0.9em 1em;
-                    border: 0.06em solid rgba(224, 224, 255, 0.2);
-                    box-shadow: 0 0.5em 0.5em -0.25em rgba(20, 16, 41, 0.06), 0 0.125em 0.25em -0.062em rgba(20, 16, 41, 0.06), 0 0 0.063em rgba(20, 16, 41, 0.12);
+                    border: 0.06em solid rgba($main_color, 0.1);
+                    // box-shadow: 0 0.1em 0.46em rgba(20, 16, 41, 0.1);
                     border-radius: 1.5em;
                     color: $main_color;
                     outline: 0;
@@ -1163,13 +1163,13 @@
                     font-size: 1em;
 
                     &:hover {
-                        box-shadow: 0 0.5em 0.5em -0.05em rgba(20, 16, 41, 0.06), 0 0.125em 0.05em -0.062em rgba(20, 16, 41, 0.06), 0 0 0.063em rgba(20, 16, 41, 0.12);
-                        border: 0.06em solid rgba(224, 224, 255, 0.1);
+                        // box-shadow: 0 0.1em 0.36em rgba(20, 16, 41, 0.1);
+                        border: 0.06em solid rgba($main_color, 0.3);
                     }
 
                     &:focus {
-                        border: 0.06em solid rgba(224, 224, 255, 0.3);
-                        box-shadow: none;
+                        border: 0.06em solid rgba($main_color, 0.3);
+                        // box-shadow: none;
                     }
 
                     &--single {
