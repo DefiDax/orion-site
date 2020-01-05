@@ -49,7 +49,11 @@ $(document).ready(function() {
         } else {
             $(this).text($(this).data('more'));
         }
-    })
+    });
+
+    toggleMobileNav();
+
+    $('select').select2();
 
 });
 
@@ -64,7 +68,6 @@ $(window).resize(function(event) {
 
 function checkOnResize() {
     // fontResize();
-    toggleMobileNav();
 }
 
 function toggleMobileNav() {
@@ -121,3 +124,99 @@ function srollToId() {
         return false;
     });
 }
+
+// Простая проверка форм на заполненность и отправка аяксом
+function formSubmit() {
+    $("[type=submit]").on('click keypress', function (e){
+        e.preventDefault();
+        var btn = $(this);
+        var form = $(this).closest('.form');
+        var antispam = form.find('.ja_antispam');
+        var url = form.attr('action');
+        var form_data = form.serialize();
+        var rezult = $(this).closest('.modal').find('.form__rezult');
+        var field = form.find('[required]');
+        var checkEmail = /^[A-Z0-9._%+-]+@([A-Z0-9-]+\.)+[A-Z]{2,4}$/i;
+        // console.log(form_data);
+
+        antispam.val('No bot');
+
+        empty = 0;
+
+        field.each(function() {
+            if ($(this).val() == "") {
+                $(this).addClass('invalid');
+                $(this).removeClass('valid');
+                // return false;
+                empty++;
+            } else {
+                // console.log($(this).attr('type'));
+                if ($(this).attr('type') === 'email') {
+                    // console.log($(this).val());
+                    if (checkEmail.test($(this).val())) {
+                        $(this).removeClass('invalid');
+                        $(this).addClass('valid');
+                    } else {
+                        $(this).addClass('invalid');
+                        $(this).removeClass('valid');
+                        empty++;
+                    }
+                } else {
+                    $(this).removeClass('invalid');
+                    $(this).addClass('valid');
+                }
+            }
+        });
+
+        // console.log(empty);
+
+        if (empty > 0) {
+            return false;
+        } else {
+            if (antispam.val()) {
+                $.ajax({
+                    url: url,
+                    type: "POST",
+                    dataType: "xml",
+                    data: form_data,
+                }).always(function() {
+                    // alert( "complete" );
+                    // console.log($(this));
+                    btn.attr('disabled', 'disabled');
+                    rezult.html('Your message has been sent!');
+                });
+            } else {
+                console.log('spam');
+            }
+        }
+
+    });
+
+    $('[required]').on('blur change', function() {
+        if ($(this).val() != '') {
+            $(this).removeClass('invalid');
+        }
+    });
+
+    $('.form__privacy input').on('change', function(event) {
+        event.preventDefault();
+        var btn = $(this).closest('.form').find('.btn');
+        if ($(this).prop('checked')) {
+            btn.removeAttr('disabled');
+            // console.log('checked');
+        } else {
+            btn.attr('disabled', true);
+        }
+    });
+
+    $('.js_other_trigger').on('change', function() {
+        var field = $('.js_other');
+        if ($(this).prop('checked')) {
+            field.attr('type', 'text');
+        } else {
+            field.attr('type', 'hidden').val('');
+        }
+    })
+}
+
+formSubmit();

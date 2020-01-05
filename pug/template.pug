@@ -1,4 +1,4 @@
--var version = '1';
+-var version = '1.3';
 <!DOCTYPE html>
 html(lang="en")
     head
@@ -28,7 +28,7 @@ html(lang="en")
                                 img(src="img/US.svg", alt="United States")
                             |EN
                         .header__action
-                            a.btn(href="#") Get in Touch
+                            button.btn(data-toggle="modal" data-target="#callback") Get in Touch
 
         main.main_content
             block content
@@ -86,5 +86,93 @@ html(lang="en")
                     .footer__dev made by 
                         a(href="#", target="_blank") roobinium
 
+    // Begin Modal callback
+    .modal.fade.callback#callback
+        .modal-dialog
+            .modal-content
+                a(href="#" class="modal-close" data-dismiss="modal")
+                .modal-header
+                    .modal-title Get in Touch
+                .modal-body
+                    form.form(action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSdgXqNZyAxQ6dp85Nd57IOboR0D1G6gnCb0vEkns7KGq2z8OA/formResponse" method="post")
+                        input.ja_antispam(type="hidden")
+                        .form__row
+                            input(type="email" data-email="" name="emailAddress" placeholder="Email" required)
+                        .form__row
+                            input(type="text" name="entry.586847119" placeholder="Name" required)
+                        .form__row
+                            select(name="entry.1458313461" required data-placeholder="Select Subject")
+                                option(value="")
+                                option(value="Investment") Investment
+                                option(value="Partnership") Partnership
+                                option(value="Beta access") Beta access
+                                option(value="General questions") General questions
+                        .form__row
+                            textarea(name="entry.1426938699" placeholder="Message" required)
+                        .form__action
+                            button.btn(type="submit") Send
+                    .form__rezult
+    // End modal callback
+
+    // Begin Modal forInvestors
+    .modal.fade.callback#forInvestors
+        .modal-dialog
+            .modal-content
+                a(href="#" class="modal-close" data-dismiss="modal")
+                .modal-header
+                    .modal-title Get in Touch
+                .modal-body
+                    form.form(action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSfF6jVO_wTHWtrJEa0nP6MVtNU77utWHXOiJRT83Y2wugU8mQ/formResponse" method="post")
+                        .form__row
+                            input(type="email" data-email="" name="emailAddress" placeholder="Email" required)
+                        .form__row
+                            input(type="text" name="entry.38228649" placeholder="Name" required)
+                        .form__row
+                            input(type="text" name="entry.1131517323" placeholder="Telegram Username")
+                        .form__row
+                            .modal-title What would like to use Orion for?
+                            .checkboxes
+                                label
+                                    input(type="checkbox" name="entry.1718357508" value="Personal Trading") 
+                                    |Personal Trading
+                                label
+                                    input(type="checkbox" name="entry.1718357508" value="Institutional Trading") 
+                                    |Institutional Trading
+                                label
+                                    input(type="checkbox" name="entry.1718357508" value="Boost Liquidity for your Exchange") 
+                                    |Boost Liquidity for your Exchange
+                                label
+                                    input(type="checkbox" name="entry.1718357508" value="Build your own DEX") 
+                                    |Build your own DEX
+                                label
+                                    input(type="checkbox" name="entry.1718357508" value="Accept Payments") 
+                                    |Accept Payments
+                                label
+                                    input(type="checkbox" name="entry.1718357508" value="Wallet Integration") 
+                                    |Wallet Integration
+                                label
+                                    input(type="checkbox" name="entry.1718357508" value="AI Trading Bots") 
+                                    |AI Trading Bots
+                                label
+                                    input(type="checkbox" name="entry.1718357508" value="Market Making") 
+                                    |Market Making
+                                label
+                                    input(type="checkbox" name="entry.1718357508" value="Run your IEO") 
+                                    |Run your IEO
+                                label
+                                    input(type="checkbox" name="entry.1718357508" value="Enterprise") 
+                                    |Enterprise
+                                label
+                                    input.js_other_trigger(type="checkbox") 
+                                    |Other
+                            input.js_other(type="hidden", name="entry.1718357508.other_option_response")
+                        .form__action
+                            button.btn(type="submit") Send
+
+                    .form__rezult 
+    // End modal forInvestors
+
     script(src="js/jquery.js")
+    script(src="js/modal.js")
+    script(src="https://cdn.jsdelivr.net/npm/select2@4.0.12/dist/js/select2.min.js")
     script(src="js/function.js?"+version+"")

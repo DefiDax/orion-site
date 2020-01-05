@@ -23,6 +23,8 @@
 @import 'core/buttons';
 // @import 'core/video';
 
+@import 'vendor/modal';
+
 @font-face {
     font-family: 'orion';
     src: url("../fonts/orion.ttf?yaprfh") format('truetype'), url("../fonts/orion.woff?yaprfh") format('woff'), url("../fonts/orion.svg?yaprfh#orion") format('svg');
@@ -1049,4 +1051,163 @@
         }
     }
 
+}
+
+.checkboxes {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -2em;
+    font-size: 0.8em;
+    // margin-top: 3em;
+
+    label {
+        padding-left: 2em;
+        width: 50%;
+        display: flex;
+        align-items: flex-start;
+        line-height: 1.4;
+        margin-bottom: 0.6em;
+        min-height: 3em;
+
+        @media (min-width: 768px) {
+            width: 33.3%;
+        }
+
+        [type=checkbox] {
+            flex: none;
+            margin-right: 0.5em;
+            margin-top: 0;
+            font-size: 1.1em;
+        }
+    }
+}
+
+.select2 {
+    &-hidden-accessible {
+        display: none;
+
+        &.invalid {
+            + .select2-container--default {
+                .select2-selection {
+                    border-color: red;
+                    background-color: #fff0f0;
+                }
+            }
+        }
+    }
+
+    &-search__field {
+        display: none;
+    }
+
+    &-container {
+        span {
+            display: block;
+        }
+
+        .form__row & {
+            width: 100% !important;
+            // display: block;
+        }
+
+        &--open {
+            z-index: 1050;
+
+            &.select2-container--default .select2-selection--single .select2-selection__arrow b {
+                transform: rotate(-225deg);
+                margin-top: 0.4em;
+            }
+        }
+
+        &--default {
+            .select2 {
+                &-results {
+                    &__options {
+                        list-style: none;
+                        padding: 8px 0;
+                        margin: 0;
+                    }
+
+                    &__option {
+                        padding: 10px 25px;
+                        cursor: pointer;
+
+                        &--highlighted[aria-selected] {
+                            background-color: rgba(#000, .1);
+                        }
+                    }
+                }
+
+                &-dropdown {
+                    position: absolute;
+                    // z-index: 150;
+                    background-color: #fff;
+                    border-radius: 6px;
+                    margin-top: 3px;
+                    box-shadow: 0 1px 10px rgba(#000, .1);
+
+                    &--below {}
+
+                    &--above {}
+                }
+
+                &-selection {
+                    padding: 0.9em 1em;
+                    border: 0.06em solid rgba(224, 224, 255, 0.2);
+                    box-shadow: 0 0.5em 0.5em -0.25em rgba(20, 16, 41, 0.06), 0 0.125em 0.25em -0.062em rgba(20, 16, 41, 0.06), 0 0 0.063em rgba(20, 16, 41, 0.12);
+                    border-radius: 1.5em;
+                    color: $main_color;
+                    outline: 0;
+                    position: relative;
+                    font-weight: 500;
+                    font-size: 1em;
+
+                    &:hover {
+                        box-shadow: 0 0.5em 0.5em -0.05em rgba(20, 16, 41, 0.06), 0 0.125em 0.05em -0.062em rgba(20, 16, 41, 0.06), 0 0 0.063em rgba(20, 16, 41, 0.12);
+                        border: 0.06em solid rgba(224, 224, 255, 0.1);
+                    }
+
+                    &:focus {
+                        border: 0.06em solid rgba(224, 224, 255, 0.3);
+                        box-shadow: none;
+                    }
+
+                    &--single {
+                        .select2 {
+                            &-selection {
+                                &__rendered {}
+
+                                &__placeholder {
+                                    color: rgba(0, 0, 0, 0.4);
+                                }
+
+                                &__arrow {
+                                    position: absolute;
+                                    right: 0;
+                                    top: 0;
+                                    bottom: 0;
+                                    width: 3em;
+                                    display: flex;
+                                    align-items: center;
+                                    justify-content: center;
+
+                                    b {
+                                        display: block;
+                                        width: 0.8em;
+                                        height: 0.8em;
+                                        border-left: 0.063em solid rgba(0, 0, 0, 0.6);
+                                        border-bottom: 0.063em solid rgba(0, 0, 0, 0.6);
+                                        transform: rotate(-45deg);
+                                        margin-top: -0.4em;
+                                        transition: transform 0.3s;
+
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
 }

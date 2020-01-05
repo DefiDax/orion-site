@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
     <title>ORION</title>
-    <link rel="stylesheet" type="text/css" href="css/style.css?1"/>
+    <link rel="stylesheet" type="text/css" href="css/style.css?1.3"/>
   </head>
   <body>
     <header class="header">
@@ -26,7 +26,9 @@
             <div class="lang">
               <div class="lang__flag"><img src="img/US.svg" alt="United States"/></div>EN
             </div>
-            <div class="header__action"><a class="btn" href="#">Get in Touch</a></div>
+            <div class="header__action">
+              <button class="btn" data-toggle="modal" data-target="#callback">Get in Touch</button>
+            </div>
           </div>
         </div>
       </div>
@@ -247,6 +249,113 @@
       </div>
     </footer>
   </body>
+  <!-- Begin Modal callback-->
+  <div class="modal fade callback" id="callback">
+    <div class="modal-dialog">
+      <div class="modal-content"><a class="modal-close" href="#" data-dismiss="modal"></a>
+        <div class="modal-header">
+          <div class="modal-title">Get in Touch</div>
+        </div>
+        <div class="modal-body">
+          <form class="form" action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSdgXqNZyAxQ6dp85Nd57IOboR0D1G6gnCb0vEkns7KGq2z8OA/formResponse" method="post">
+            <input class="ja_antispam" type="hidden"/>
+            <div class="form__row">
+              <input type="email" data-email="" name="emailAddress" placeholder="Email" required="required"/>
+            </div>
+            <div class="form__row">
+              <input type="text" name="entry.586847119" placeholder="Name" required="required"/>
+            </div>
+            <div class="form__row">
+              <select name="entry.1458313461" required="required" data-placeholder="Select Subject">
+                <option value=""></option>
+                <option value="Investment">Investment</option>
+                <option value="Partnership">Partnership</option>
+                <option value="Beta access">Beta access</option>
+                <option value="General questions">General questions</option>
+              </select>
+            </div>
+            <div class="form__row">
+              <textarea name="entry.1426938699" placeholder="Message" required="required"></textarea>
+            </div>
+            <div class="form__action">
+              <button class="btn" type="submit">Send</button>
+            </div>
+          </form>
+          <div class="form__rezult"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- End modal callback-->
+  <!-- Begin Modal forInvestors-->
+  <div class="modal fade callback" id="forInvestors">
+    <div class="modal-dialog">
+      <div class="modal-content"><a class="modal-close" href="#" data-dismiss="modal"></a>
+        <div class="modal-header">
+          <div class="modal-title">Get in Touch</div>
+        </div>
+        <div class="modal-body">
+          <form class="form" action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSfF6jVO_wTHWtrJEa0nP6MVtNU77utWHXOiJRT83Y2wugU8mQ/formResponse" method="post">
+            <div class="form__row">
+              <input type="email" data-email="" name="emailAddress" placeholder="Email" required="required"/>
+            </div>
+            <div class="form__row">
+              <input type="text" name="entry.38228649" placeholder="Name" required="required"/>
+            </div>
+            <div class="form__row">
+              <input type="text" name="entry.1131517323" placeholder="Telegram Username"/>
+            </div>
+            <div class="form__row">
+              <div class="modal-title">What would like to use Orion for?</div>
+              <div class="checkboxes">
+                <label>
+                  <input type="checkbox" name="entry.1718357508" value="Personal Trading"/>Personal Trading
+                </label>
+                <label>
+                  <input type="checkbox" name="entry.1718357508" value="Institutional Trading"/>Institutional Trading
+                </label>
+                <label>
+                  <input type="checkbox" name="entry.1718357508" value="Boost Liquidity for your Exchange"/>Boost Liquidity for your Exchange
+                </label>
+                <label>
+                  <input type="checkbox" name="entry.1718357508" value="Build your own DEX"/>Build your own DEX
+                </label>
+                <label>
+                  <input type="checkbox" name="entry.1718357508" value="Accept Payments"/>Accept Payments
+                </label>
+                <label>
+                  <input type="checkbox" name="entry.1718357508" value="Wallet Integration"/>Wallet Integration
+                </label>
+                <label>
+                  <input type="checkbox" name="entry.1718357508" value="AI Trading Bots"/>AI Trading Bots
+                </label>
+                <label>
+                  <input type="checkbox" name="entry.1718357508" value="Market Making"/>Market Making
+                </label>
+                <label>
+                  <input type="checkbox" name="entry.1718357508" value="Run your IEO"/>Run your IEO
+                </label>
+                <label>
+                  <input type="checkbox" name="entry.1718357508" value="Enterprise"/>Enterprise
+                </label>
+                <label>
+                  <input class="js_other_trigger" type="checkbox"/>Other
+                </label>
+              </div>
+              <input class="js_other" type="hidden" name="entry.1718357508.other_option_response"/>
+            </div>
+            <div class="form__action">
+              <button class="btn" type="submit">Send</button>
+            </div>
+          </form>
+          <div class="form__rezult"> </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- End modal forInvestors-->
   <script src="js/jquery.js"></script>
-  <script src="js/function.js?1"></script>
+  <script src="js/modal.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/select2@4.0.12/dist/js/select2.min.js"></script>
+  <script src="js/function.js?1.3"></script>
 </html>

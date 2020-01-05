@@ -1,9 +1,6 @@
 .form {
-	@extend %clear_a;
-
 	&__row {
-		margin-bottom: 15px;
-		@extend %clear_a;
+		margin-bottom: 1em;
 
 		.btn,
 		input:not([type]),
@@ -22,11 +19,26 @@
 		textarea {
 			max-width: 100%;
 			max-width: 100%;
-			min-height: 15px;
+			min-height: 7em;
+			resize: vertical;
+		}
+	}
+
+	&__rezult {
+		font-weight: 700;
+		color: #00bbff;
+		text-align: center;
+
+		&:not(:empty) {
+			margin-top: 2em;
 		}
 	}
 
 	&__label {}
+
+	&__action {
+		margin-top: 2em;
+	}
 
 	&_inline {
 		display: flex;
@@ -70,6 +82,31 @@ textarea {
 	transition: all 0.3s;
 	color: rgba(224, 224, 255, 0.7);
 
+	.modal & {
+		padding: 0.9em 1em;
+		border: 0.06em solid rgba(224, 224, 255, 0.2);
+		box-shadow: 0 0.5em 0.5em -0.25em rgba(20, 16, 41, 0.06), 0 0.125em 0.25em -0.062em rgba(20, 16, 41, 0.06), 0 0 0.063em rgba(20, 16, 41, 0.12);
+		border-radius: 1.5em;
+		color: $main_color;
+
+		&:hover {
+			box-shadow: 0 0.5em 0.5em -0.05em rgba(20, 16, 41, 0.06), 0 0.125em 0.05em -0.062em rgba(20, 16, 41, 0.06), 0 0 0.063em rgba(20, 16, 41, 0.12);
+			border: 0.06em solid rgba(224, 224, 255, 0.1);
+			// background-color: $input_hover_bg_color;
+		}
+
+		&:focus {
+			border: 0.06em solid rgba(224, 224, 255, 0.3);
+			box-shadow: none;
+			// background-color: $input_focus_bg_color;
+		}
+
+		@include placeholder {
+			color: rgba(0, 0, 0, 0.4);
+			font-weight: 500;
+		}
+	}
+
 	&:hover {
 		border: 0.06em solid rgba(224, 224, 255, 0.1);
 		// background-color: $input_hover_bg_color;
@@ -105,18 +142,22 @@ input[type=number]::-webkit-outer-spin-button {
 input[type=checkbox],
 input[type=radio] {
 	padding: 0;
-	display: inline-block;
-	height: 14px;
-	width: 14px;
-	border: 1px solid #aaa;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	height: 1.4em;
+	width: 1.4em;
+	border: 0.06em solid rgba(224, 224, 255, 1);
+	border-radius: 0.2em;
 	overflow: hidden;
-	margin-top: -4px;
+	// margin-top: -4px;
 	vertical-align: middle;
-	-webkit-appearance: none;
+	appearance: none;
 	outline: 0;
 	background: 0 0;
 	text-align: center;
 	position: relative;
+	box-shadow: 0 0.5em 0.5em -0.25em rgba(20, 16, 41, 0.06), 0 0.125em 0.25em -0.062em rgba(20, 16, 41, 0.06), 0 0 0.063em rgba(20, 16, 41, 0.12);
 
 	&:not(:disabled),
 	&:not(:disabled) {
@@ -159,12 +200,17 @@ input[type=radio] {
 input[type=checkbox] {
 	&:checked:before,
 	&:indeterminate:before {
-		content: "\2714";
-		font-size: 12px;
+		content: "";
+		// font-size: 1em;
+		width: 0.7em;
+		height: 0.4em;
+		border-left: 0.16em solid #202036;
+		border-bottom: 0.16em solid #202036;
 		-webkit-font-smoothing: antialiased;
 		text-align: center;
-		line-height: 13px;
-		color: #000;
+		transform: rotate(-45deg);
+		// line-height: 13px;
+		color: #202036;
 	}
 
 	&:indeterminate:before {

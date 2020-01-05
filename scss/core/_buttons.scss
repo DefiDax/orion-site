@@ -47,6 +47,12 @@
 		box-shadow: none;
 	}
 
+	&:disabled {
+		box-shadow: none;
+		opacity: 0.5;
+		cursor: default;
+	}
+
 	&_primary {
 		box-shadow: 0 0.5em 0.5em -0.25em rgba(0, 187, 255, 0.06), 0 1em 1.5em rgba(0, 187, 255, 0.12), 0 0.125em 0.25em -0.062em rgba(27, 10, 82, 0.06), 0 0 0.063em rgba(0, 187, 255, 0.12), inset 0 0.125em 0.375em rgba(0, 187, 255, 0.4);
 		// border-radius: 1.5em;
