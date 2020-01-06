@@ -1393,10 +1393,12 @@ input[type=checkbox]:disabled:checked:before, input[type=checkbox]:disabled:inde
         margin-bottom: -5.5em; } }
   .fScreen__sub {
     color: rgba(224, 224, 255, 0.6);
-    font-size: 1.25em;
+    font-size: 1.15em;
     font-weight: 500;
     line-height: 1.8;
-    margin-bottom: 1.6em; }
+    margin-bottom: 1.6em;
+    letter-spacing: 0.1em;
+    }
   .fScreen__action {
     margin: 0 -0.8em; }
     .fScreen__action .btn {
@@ -1440,7 +1442,7 @@ input[type=checkbox]:disabled:checked:before, input[type=checkbox]:disabled:inde
     font-size: 3em;
     font-weight: 700;
     letter-spacing: -0.0425em;
-    line-height: 1;
+    line-height: 1.4;
     margin: 0 0 1em; }
 
 .traiding {
@@ -1461,7 +1463,7 @@ input[type=checkbox]:disabled:checked:before, input[type=checkbox]:disabled:inde
       -ms-flex: none;
       flex: none;
       width: 59.8%;
-      padding-bottom: 4.1em; }
+      padding-bottom: 7.5em; }
       .traiding__img img {
         display: block;
         margin-left: -2.2em;
@@ -1473,7 +1475,7 @@ input[type=checkbox]:disabled:checked:before, input[type=checkbox]:disabled:inde
       .traiding__descr {
         padding-top: 8em; } }
   .traiding__text {
-    font-size: 1.25em;
+    font-size: 1.15em;
     color: rgba(20, 16, 41, 0.6);
     font-weight: 500;
     line-height: 1.8; }
@@ -1585,7 +1587,7 @@ input[type=checkbox]:disabled:checked:before, input[type=checkbox]:disabled:inde
     color: rgba(224, 224, 255, 0.6);
     font-size: 0.875em;
     font-weight: 500;
-    line-height: 1.71; }
+    line-height: 1.5; }
 
 .earning {
   position: relative;
@@ -1606,7 +1608,8 @@ input[type=checkbox]:disabled:checked:before, input[type=checkbox]:disabled:inde
       -webkit-flex: none;
       -ms-flex: none;
       flex: none;
-      width: 60%; }
+      width: 60%;
+      padding-bottom: 30px}
       .earning__img img {
         display: block;
         margin-left: -7.5em;
@@ -1619,7 +1622,8 @@ input[type=checkbox]:disabled:checked:before, input[type=checkbox]:disabled:inde
     color: rgba(20, 16, 41, 0.6);
     font-size: 1.25em;
     font-weight: 500;
-    line-height: 1.8; }
+    line-height: 1.8;
+    padding-bottom: 7.7em}
   .earning__action {
     margin-top: 2.2em; }
 

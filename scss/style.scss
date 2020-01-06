@@ -160,10 +160,11 @@
 
     &__sub {
         color: rgba(224, 224, 255, 0.6);
-        font-size: 1.25em;
+        font-size: 1.15em;
         font-weight: 500;
         line-height: 1.8;
         margin-bottom: 1.6em;
+        letter-spacing: 0.1em;
     }
 
     &__action {
@@ -220,7 +221,7 @@
         font-size: 3em;
         font-weight: 700;
         letter-spacing: -0.0425em;
-        line-height: 1;
+        line-height: 1.4;
         margin: 0 0 1em;
     }
 
@@ -245,7 +246,7 @@
         @media (min-width: 768px) {
             flex: none;
             width: 59.8%;
-            padding-bottom: 4.1em;
+            padding-bottom: 7.5em;
 
             img {
                 display: block;
@@ -267,7 +268,7 @@
     }
 
     &__text {
-        font-size: 1.25em;
+        font-size: 1.15em;
         color: rgba(20, 16, 41, 0.6);
         font-weight: 500;
         line-height: 1.8;
@@ -401,7 +402,7 @@
         color: rgba(224, 224, 255, 0.6);
         font-size: 0.875em;
         font-weight: 500;
-        line-height: 1.71;
+        line-height: 1.5;
     }
 
 }
@@ -423,6 +424,7 @@
         @media (min-width: 768px) {
             flex: none;
             width: 60%;
+            padding-bottom: 30px;
 
             img {
                 display: block;
@@ -443,6 +445,7 @@
         font-size: 1.25em;
         font-weight: 500;
         line-height: 1.8;
+        padding-bottom: 7.7em
     }
 
     &__action {
