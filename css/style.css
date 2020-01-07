@@ -1713,8 +1713,9 @@ input[type=checkbox]:disabled:checked:before, input[type=checkbox]:disabled:inde
     -webkit-transition: background 0.3s;
     -o-transition: background 0.3s;
     transition: background 0.3s; }
-    .product__name:hover {
-      background: rgba(255, 255, 255, 0.25) url("../img/Rectangle.png") 0 0; }
+    .product__name.highlight {
+      background: rgba(255, 255, 255, 0.75) url("../img/Rectangle.png") 0 0;
+      color: #202035;}
     @media (min-width: 768px) {
       .product__name {
         position: absolute; }

@@ -569,8 +569,9 @@
         background: rgba(255, 255, 255, 0.15) url("../img/Rectangle.png") 0 0;
         transition: background 0.3s;
 
-        &:hover {
-            background: rgba(255, 255, 255, 0.25) url("../img/Rectangle.png") 0 0;
+        &.highlight {
+            background: rgba(255, 255, 255, 0.75) url("../img/Rectangle.png") 0 0;
+            color: #202035;
         }
 
         @media (min-width: 768px) {

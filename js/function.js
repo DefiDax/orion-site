@@ -90,26 +90,50 @@ function toggleMobileNav() {
 function showProductDescription() {
     var toggl = $('.product__name');
     var wrap = $('.product__change');
+    var action = $('.product__action');
     var defaultTitle = $('.product .section__title').text();
     var defaultText = $('.product__text').text();
-    var title, text;
+    var defaultAction = action.find('a').data('target');
+    var title, text, url;
 
-    toggl.on('mouseenter', function() {
+    toggl.click(function() {
+        toggl.not(this).removeClass("highlight");
+        $(this).toggleClass("highlight");
+        if ($(this).is(".highlight")) {
+            title = $(this).text();
+            text = $(this).data('text');
+            url = $(this).data('url');
+            setTemplate(title, text, url);
+        } else {
+            setTemplate(defaultTitle, defaultText, null);
+        }
+    });
+    /*toggl.on('mouseenter', function() {
         title = $(this).text();
         text = $(this).data('text');
         setTemplate(title, text);
-    });
+    })
 
     toggl.on('mouseleave', function() {
     // $('.product__content').on('mouseleave', function() {
         setTemplate(defaultTitle, defaultText);
-    });
+    });*/
 
-    function setTemplate(title, text) {
+    function setTemplate(title, text, url) {
         var template = `<h2 class="section__title">`+title+`</h2>
         <div class="product__text">`+text+`</div>`;
         // console.log(template);
         wrap.html(template);
+
+        var actionBtn;
+        if (!url) {
+            actionBtn = `<a class="btn" href="#" data-toggle="modal" data-target="#forInvestors" target="_blank">Learn More</a>`;
+        } else if (url.startsWith("#")) {
+            actionBtn = '';
+        } else {
+            actionBtn = `<a class="btn" href="${url}" target="_blank">Learn More</a>`;
+        }
+        action.html(actionBtn);
     }
 }
 showProductDescription();
