@@ -2373,9 +2373,6 @@ input[type=checkbox]:disabled:checked:before, input[type=checkbox]:disabled:inde
   margin: 0 -1em;
   display: none;
   position: relative; }
-  @media (min-width: 768px) {
-    .product__slider {
-      margin: 0 -2em; } }
   .product__slider:after {
     content: '';
     position: absolute;
