@@ -2384,9 +2384,6 @@ input[type=checkbox]:disabled:checked:before, input[type=checkbox]:disabled:inde
     bottom: 0;
     width: 1em;
     background-color: #1f2036; }
-    @media (min-width: 768px) {
-      .product__slider:after {
-        width: 2em; } }
   .product__slider.slick-initialized {
     display: block; }
   .product__slider .slick-slide {
