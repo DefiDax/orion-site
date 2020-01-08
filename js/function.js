@@ -168,7 +168,7 @@ function startSlider() {
                 {
                     breakpoint: 768,
                     settings: {
-                        adaptiveHeight: true,
+                        // adaptiveHeight: true,
                         // arrows: true,
                         // dots: true,
                     }
