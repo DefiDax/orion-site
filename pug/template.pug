@@ -18,10 +18,10 @@ html(lang="en")
                 .header__group
                     nav.header__center
                         ul.navbar
-                            -var nav = ['About', 'Trading Desk', 'DeFi Solutions', 'Blog', 'Contact'];
+                            -var nav = [{name: 'About', href: 'about.html'}, {name: 'Trading Desk', href: '#trading'}, {name: 'DeFi Solutions', href: '#defi'}, {name: 'Blog', href: 'https://medium.com/orion-protocol'}, {name: 'Contact', href: '#contacts'}];
                             each value in nav
                                 li.navbar__item
-                                    a.navbar__link(href="#" data-scroll-to="")= value
+                                    a.navbar__link(href= value.href data-scroll-to="")= value.name
                     .header__right
                         .lang
                             .lang__flag
@@ -33,10 +33,10 @@ html(lang="en")
         main.main_content
             block content
 
-        footer.footer
+        footer.footer#contacts
             .footer__content
                 .footer__top
-                    a.logo(href="#")
+                    a.logo(href="/")
                         img(src="img/logo.png", alt="")
                     .lang
                         .lang__flag
@@ -48,42 +48,42 @@ html(lang="en")
 
                     ul.soc
                         li.soc__item
-                            a.icon-telegram(href="#")
+                            a.icon-telegram(href="https://t.me/orionprotocol")
                         li.soc__item
-                            a.icon-bitcoin(href="#")
+                            a.icon-bitcoin(href="https://bitcointalk.org/index.php?topic=5153861.new")
                         li.soc__item
-                            a.icon-facebook(href="#")
+                            a.icon-github(href="https://github.com/orionprotocol" target="_blank")
+                        //- li.soc__item
+                            a.icon-facebook(href="")
                         li.soc__item
-                            a.icon-github(href="#")
+                            a.icon-linkedin(href="https://www.linkedin.com/company/orion-protocol" target="_blank")
                         li.soc__item
-                            a.icon-linkedin(href="#")
+                            a.icon-youtube(href="https://www.youtube.com/channel/UCgz77eATRldOwfvgYvw8lcw" target="_blank")
                         li.soc__item
-                            a.icon-youtube(href="#")
-                        li.soc__item
-                            a.icon-twitter(href="#")
+                            a.icon-twitter(href="https://twitter.com/orion_protocol" target="_blank")
 
                 .footer__nav
                     ul.navbar
                         li.navbar__item
-                            a.navbar__link(href="#") Home
+                            a.navbar__link(href="#home") Home
                         li.navbar__item
-                            a.navbar__link(href="#") About
+                            a.navbar__link(href="about.html") About
                         li.navbar__item
-                            a.navbar__link(href="#") Trading desk
+                            a.navbar__link(href="#trading") Trading desk
                         li.navbar__item
-                            a.navbar__link(href="#") DeFi Solutions
+                            a.navbar__link(href="#defi") DeFi Solutions
                         li.navbar__item
-                            a.navbar__link(href="#") Blog
+                            a.navbar__link(href="https://medium.com/orion-protocol") Blog
                         li.navbar__item
-                            a.navbar__link(href="#") Contact
+                            a.navbar__link(href="#contacts") Contact
 
                 .footer__bottom
                     .footer__copy © Orion 2019, All rights reserved.
                     a(href="#") Terms & Conditions
                     a(href="#") Privacy Policy
-                    a(href="#") Sales & Refunds
+                    //- a(href="#") Sales & Refunds
                     a(href="#") Legal
-                    .footer__dev made by 
+                    //- .footer__dev made by 
                         a(href="#", target="_blank") roobinium
 
     // Begin Modal callback
@@ -97,9 +97,9 @@ html(lang="en")
                     form.form(action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSdgXqNZyAxQ6dp85Nd57IOboR0D1G6gnCb0vEkns7KGq2z8OA/formResponse" method="post")
                         input.ja_antispam(type="hidden")
                         .form__row
-                            input(type="email" data-email="" name="emailAddress" placeholder="Email" required)
-                        .form__row
                             input(type="text" name="entry.586847119" placeholder="Name" required)
+                        .form__row
+                            input(type="email" data-email="" name="emailAddress" placeholder="Email" required)
                         .form__row
                             select(name="entry.1458313461" required data-placeholder="Select Subject")
                                 option(value="")
@@ -120,13 +120,14 @@ html(lang="en")
             .modal-content
                 a(href="#" class="modal-close" data-dismiss="modal")
                 .modal-header
-                    .modal-title For Investors
+                    .modal-title Request Beta Access
                 .modal-body
                     form.form(action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSfF6jVO_wTHWtrJEa0nP6MVtNU77utWHXOiJRT83Y2wugU8mQ/formResponse" method="post")
-                        .form__row
-                            input(type="email" data-email="" name="emailAddress" placeholder="Email" required)
+                        input.ja_antispam(type="hidden")
                         .form__row
                             input(type="text" name="entry.38228649" placeholder="Name" required)
+                        .form__row
+                            input(type="email" data-email="" name="emailAddress" placeholder="Email" required)
                         .form__row
                             input(type="text" name="entry.1131517323" placeholder="Telegram Username")
                         .form__row
@@ -174,5 +175,6 @@ html(lang="en")
 
     script(src="js/jquery.js")
     script(src="js/modal.js")
+    script(src="js/slick.min.js")
     script(src="https://cdn.jsdelivr.net/npm/select2@4.0.12/dist/js/select2.min.js")
     script(src="js/function.js?"+version+"")

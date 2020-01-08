@@ -24,6 +24,7 @@
 // @import 'core/video';
 
 @import 'vendor/modal';
+@import 'vendor/slick';
 
 @font-face {
     font-family: 'orion';
@@ -445,7 +446,7 @@
         font-size: 1.25em;
         font-weight: 500;
         line-height: 1.8;
-        padding-bottom: 7.7em
+        padding-bottom: 7.7em;
     }
 
     &__action {
@@ -1213,5 +1214,186 @@
                 }
             }
         }
+    }
+}
+
+.product__slider {
+    margin: 0 -1em;
+    display: none;
+    position: relative;
+
+    @media (min-width: 768px) {
+        margin: 0 -2em;
+    }
+
+    &:after {
+        content: '';
+        position: absolute;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        width: 1em;
+        background-color: #1f2036;
+
+        @media (min-width: 768px) {
+            width: 2em;
+        }
+    }
+
+    &.slick-initialized {
+        display: block;
+    }
+
+    .slick {
+        &-slide {
+            outline: 0;
+            margin: 0 1em;
+            // opacity: 0;
+            padding-bottom: 2em;
+            transition: opacity 0.3;
+        }
+
+        &-list {
+            // max-width: 740px;
+            margin: auto;
+            padding: 0;
+        }
+
+        &-current {
+            opacity: 1;
+        }
+
+        &-arrow {
+            position: absolute;
+            border: none;
+            font-size: 0;
+            background-color: transparent;
+            width: 30px;
+            height: 30px;
+            top: 50%;
+            cursor: pointer;
+            transition: all 0.3s;
+
+            &:hover {
+                opacity: 0.8;
+            }
+
+            &:after,
+            &:before {
+                content: '';
+                position: absolute;
+                left: 0;
+                color: #fff;
+                border: 2px solid;
+                width: 100%;
+            }
+
+            &:before {
+                top: 2px;
+                transform: rotate(45deg);
+            }
+
+            &:after {
+                bottom: 2px;
+                transform: rotate(-45deg);
+            }
+        }
+
+        &-next {
+            right: 0;
+
+            &:before {}
+        }
+
+        &-prev {
+            left: 0;
+            transform: rotate(180deg);
+
+            &:before {}
+        }
+
+        &-dots {
+            display: flex;
+            margin: 0 1em 4em;
+            padding: 0;
+            list-style: none;
+            justify-content: center;
+
+            @media (min-width: 768px) {
+                margin: 0 2em 3em;
+            }
+
+            li {
+                // background-color: rgba($color_withe, 0.1);
+                position: relative;
+                // margin: 0 0.1em;
+                cursor: pointer;
+
+                @media (max-width: 767px) {
+                    width: 1em;
+                    height: 1em;
+                    background-color: rgba($color_withe, 0.6);
+                    border-radius: 50%;
+                    margin: 0 0.5em;
+                }
+
+                @media (min-width: 768px) {
+                    margin: 0 0.1em;
+                    padding: 1em 0;
+                    flex-grow: 1;
+
+                    &:after {
+                        content: '';
+                        position: absolute;
+                        top: 0.9em;
+                        left: 0;
+                        bottom: 0.9em;
+                        background-color: #00bbff;
+                        width: 0;
+                    }
+
+                    &:before {
+                        content: '';
+                        position: absolute;
+                        top: 0.9em;
+                        left: 0;
+                        bottom: 0.9em;
+                        background-color: rgba($color_withe, 0.1);
+                        width: 100%;
+                    }
+
+                }
+
+                &.slick-active {
+                    @media (max-width: 767px) {
+                        background-color: #00bbff;
+                    }
+
+                    &:after {
+                        // transition: width 6s;
+                        // width: 100%;
+
+                        @media (min-width: 768px) {
+                            width: 100%;
+                            animation: progress 6s;
+                        }
+                    }
+                }
+
+                button {
+                    display: none;
+                }
+            }
+        }
+    }
+}
+
+@keyframes progress {
+    from {
+        width: 0;
+    }
+
+    to {
+        width: 100%;
     }
 }

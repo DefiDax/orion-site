@@ -55,6 +55,7 @@ $(document).ready(function() {
 
     $('select').select2();
 
+
 });
 
 $(window).resize(function(event) {
@@ -136,7 +137,7 @@ function showProductDescription() {
         action.html(actionBtn);
     }
 }
-showProductDescription();
+// showProductDescription();
 
 // Scroll to ID // Плавный скролл к элементу при нажатии на ссылку. В ссылке указываем ID элемента
 function srollToId() {
@@ -148,6 +149,52 @@ function srollToId() {
         return false;
     });
 }
+
+function startSlider() {
+    var product = $('#defi').offset().top - 150;
+    var pScroll = $(window).scrollTop();
+    var slider = $('.product__slider');
+
+    if (!slider.hasClass('slick-initialized')) {
+        slider.slick({
+            arrows: false,
+            pauseOnFocus: false,
+            pauseOnHover: false,
+            // adaptiveHeight: true,
+            dots: true,
+            autoplay: false,
+            autoplaySpeed: 6000,
+            responsive: [
+                {
+                    breakpoint: 768,
+                    settings: {
+                        adaptiveHeight: true,
+                        // arrows: true,
+                        // dots: true,
+                    }
+                }
+            ]
+        });
+    }
+    if (pScroll > product) {
+        if (!slider.hasClass('started')) {
+            // console.log('start');
+            slider
+                .slick('setPosition', 0)
+                .addClass('started');
+                if (!isXsWidth()) {
+                    slider
+                        .slick('slickSetOption', {'autoplay': true}, true);
+                }
+        }
+    }
+}
+
+startSlider();
+$(window).scroll(function() {
+    startSlider();
+});
+
 
 // Простая проверка форм на заполненность и отправка аяксом
 function formSubmit() {

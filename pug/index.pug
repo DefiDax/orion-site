@@ -14,26 +14,22 @@ block content
                     h1.section__title DeFi is the Future. We’re Already Here
                     .fScreen__sub Industry first DeFi solutions centered around our advanced Liquidity Aggregator Protocol
                     .fScreen__action
-                        a.btn(href="#" data-toggle="modal" data-target="#forInvestors") What is Orion?
-                        a.btn.btn_primary(href="#") Whitepaper
+                        a.btn(href="/pitchdeck.pdf" target="_blank") Pitch Deck
+                        a.btn.btn_primary(href="/whitepaper.pdf" target="_blank") Whitepaper
 
     // end fScreen
 
     // begin traiding
-    section#traiding.traiding.section
+    section#trading.traiding.section
         .container_center
             .traiding__content
                 .traiding__img
                     img(src="img/traiding-img.png", alt="Traiding terminal")
                 .traiding__descr
                     h2.section__title The Only Trading Terminal You Need
-                    .traiding__text 
-                        b Orion Terminal 
-                        |seamlessly aggregates bottomless liquidity from 
-                        b all exchanges, 
-                        |centralized + decentralized.
+                    .traiding__text <b>Orion Terminal </b>seamlessly aggregates bottomless liquidity from <b>all exchanges, </b>centralized + decentralized: centralized + decentralized: providing rich trading tools in one easy to use platform.
                     .traiding__action
-                        button.btn(data-toggle="modal" data-target="#callback") Get in Touch
+                        button.btn(data-toggle="modal" data-target="#forInvestors") Beta Signup
 
     // end traiding
 
@@ -43,9 +39,9 @@ block content
             .features__content
                 .features__left
                     .section__name features
-                    h2.section__title The Crypto Market Had Too Many Exchanges & Not Enough Liquidity...
+                    h2.section__title The Crypto Market Has Too Many Exchanges + Not Enough Liquidity 
                         span Until Now
-                    .features__action
+                    //- .features__action
                         button.btn(data-toggle="modal" data-target="#callback") Get in touch
 
                 .features__right
@@ -54,22 +50,22 @@ block content
                             .features__icon
                                 img(src="img/features-1.svg", alt="")
                             .features__name Always Own Your Personal Assets
-                            .features__text Custody has always been an issue in crypto, until now. Trade with the liquidity
+                            .features__text Custody has always been an issue in crypto, until now. Trade with the liquidity of the entire crypto market while still having custody of your assets.
                         .features__item
                             .features__icon
                                 img(src="img/features-2.svg", alt="")
                             .features__name Access Liquidity <br>in One Place
-                            .features__text Orion encompasses the liquidity of all centralized and decentralized exchanges
+                            .features__text Orion encompasses the liquidity of all centralized and decentralized exchanges in one seamlessly aggregated order book, allowing you to buy or sell your assets at the best price, every time
                         .features__item
                             .features__icon
-                                img(src="img/features-3.svg", alt="")
-                            .features__name Always Own Your Personal Assets
-                            .features__text Custody has always been an issue in crypto, until now. Trade with the liquidity
+                                img(src="img/features-5.svg", alt="")
+                            .features__name Arbitrage <br/> Opportunities
+                            .features__text Orion always searches for the best prices on the market and allows to exploit arbitrage strategies without funding accounts on multiple exchanges.
                         .features__item
                             .features__icon
                                 img(src="img/features-4.svg", alt="")
                             .features__name Robust Your <br>Trading Tools
-                            .features__text Embedded within the terminal are intuitive tools that provide you with all of the news
+                            .features__text Embedded within the terminal are intuitive tools that provide you with all of the news, market analysis, and trading signals in real- time to conduct successful trades.
 
     // end features
 
@@ -80,32 +76,58 @@ block content
                 .earning__img
                     img(src="img/earning.png", alt="")
                 .earning__desc
-                    .section__name how it works
+                    .section__name shared liquidity pool
                     h2.section__title Why Aren’t You Earning Risk-Free Passive Income on Your Assets?
-                    .earning__text Orion’s shared liquidity pool is the core element of the trade functionality, allowing for trades to take place withouy ever handing over custody of your assets. Liquidity providers that stake assets in the pool will enjoy high-yield, passive income on their digital asset. It’s that simple.
-                    .earning__action
+                    .earning__text Orion’s shared liquidity pool is the core element of the trade functionality, allowing for trades to take place without ever handing over custody of your assets. Liquidity providers that stake assets in the pool will enjoy high-yield, passive income on their digital asset. <b>It’s that simple.</b>
+                    //- .earning__action
                         button.btn(data-toggle="modal" data-target="#callback") Get in touch
 
     // end earning
 
     // begin product
-    section#product.product.section
+    section#defi.product.section
         .container_center
             .product__content
                 .product__descr
                     .section__name our products
-                    .product__change
-                        h2.section__title We Are DeFi
-                        .product__text We’re not just another crypto exchange. We’re an all in one DeFi platform that supplies much needed solutions for businesses and consumers alike.
-                    .product__action
-                        button.btn(data-toggle="modal" data-target="#callback") Get in Touch
+                    .product__slider
+                        .product__item
+                            .product__change
+                                h2.section__title We Are DeFi
+                                .product__text We’re not just another crypto exchange. We’re an all in one DeFi platform that supplies much needed solutions for businesses and consumers alike.
+                            .product__action
+                                a.btn(href="#" data-toggle="modal" data-target="#forInvestors") Learn More
+                        .product__item
+                            .product__change
+                                h2.section__title Orion Enterprise Trade
+                                .product__text Projects utilize this feature to fulfill large token orders placed by enterprise clients directly from the open market at the best price
+                            .product__action
+                                a.btn(href="#" data-toggle="modal" data-target="#forInvestors") Learn More
+                        .product__item
+                            .product__change
+                                h2.section__title Orion Liquidity Boost Plugin
+                                .product__text xchanges that lack volume may tap into Orion’s aggregated order books to add immediate liquidity to their exchange.
+                            .product__action
+                                a.btn(href="liquidityboost.pdf") Learn More
+                        .product__item
+                            .product__change
+                                h2.section__title Orion Terminal
+                                .product__text Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores repudiandae ipsam provident eaque beatae alias.
+                            .product__action
+                                a.btn(href="#" data-toggle="modal" data-target="#forInvestors") Learn More
+                        .product__item
+                            .product__change
+                                h2.section__title Orion Blockchain DEX Kit
+                                .product__text Allows blockchain projects to quickly build robust dexes with endless, instant liquidity using Orion’s aggregator.
+                            .product__action
+                                a.btn(href="dexkit.pdf") Learn More
                 .product__img
                     img(src="img/products-img.png", alt="Products")
                     .product__list
-                        .product__name(data-text="Projects utilize this feature to fulfill large token orders placed by enterprise clients directly from the open market at the best price.") Orion Enterprise Trade
-                        .product__name(data-text="Exchanges that lack volume may tap into Orion’s aggregated order books to add immediate liquidity to their exchange.") Orion Liquidity Boost Plugin
-                        .product__name(data-text="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores repudiandae ipsam provident eaque beatae alias.") Orion Terminal
-                        .product__name(data-text="Allows blockchain projects to quickly build robust dexes with endless, instant liquidity using Orion’s aggregator. ") Orion Blockchain DEX Kit
+                        //- .product__name(data-text="Projects utilize this feature to fulfill large token orders placed by enterprise clients directly from the open market at the best price.") Orion Enterprise Trade
+                        //- .product__name(data-text="Exchanges that lack volume may tap into Orion’s aggregated order books to add immediate liquidity to their exchange.") Orion Liquidity Boost Plugin
+                        //- .product__name(data-text="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores repudiandae ipsam provident eaque beatae alias.") Orion Terminal
+                        //- .product__name(data-text="Allows blockchain projects to quickly build robust dexes with endless, instant liquidity using Orion’s aggregator. ") Orion Blockchain DEX Kit
 
     // end product
 
@@ -118,32 +140,32 @@ block content
                         .partners__icon
                             img(src="img/partners-1.svg", alt="")
                         .partners__name wanchain
-                        .partners__title Jason Bailey
-                        .partners__txt Jason is the leading blockchain educator in Africa. He is also a writer and crypto contributor
+                        .partners__title Jack Lu
+                        .partners__txt The vision at Orion is very similar to ours in “connecting the world’s digital assets” through a seamless experience.
+                    .partners__item
+                        .partners__icon
+                            img(src="img/partners-4.png", alt="")
+                        .partners__name holochain
+                        .partners__title David Atkinson
+                        .partners__txt We've hand chosen the very best companies to partner with to further our mission of creating a complete DeFi solution.
+                    .partners__item
+                        .partners__icon
+                            img(src="img/partners-3.svg", alt="")
+                        .partners__name elrond
+                        .partners__title Beniamin Mincu
+                        .partners__txt Orion has the right tools and approach for achieving this goal, and needs fast infrastructure & interoperability to come to life.
                     .partners__item
                         .partners__icon
                             img(src="img/partners-2.png", alt="")
                         .partners__name certik
-                        .partners__title Lucy Miller
-                        .partners__txt Lucy is a serial entrepreneur with a background in marketing, mainly focused
-                    .partners__item
-                        .partners__icon
-                            img(src="img/partners-2.png", alt="")
-                        .partners__name certik
-                        .partners__title Lucy Miller
-                        .partners__txt Lucy is a serial entrepreneur with a background in marketing, mainly focused
-                    .partners__item
-                        .partners__icon
-                            img(src="img/partners-1.svg", alt="")
-                        .partners__name wanchain
-                        .partners__title Jason Bailey
-                        .partners__txt Jason is the leading blockchain educator in Africa. He is also a writer and crypto contributor
+                        .partners__title Ronghui Gu
+                        .partners__txt CertiK is proud to work with innovators and thought leaders like ORION to build a safer blockchain ecosystem, together.
 
                 .partners__descr
                     .section__name our partners
                     h2.section__title Partnerships <br>That Matter
                     .partners__text Our partners are not just for optics. We’ve hand chosen the very best companies to partner with to further our mission of creating a complete DeFi solution.
-                    .partners__action
+                    //- .partners__action
                         button.btn(data-toggle="modal" data-target="#callback") Get in Touch
 
 

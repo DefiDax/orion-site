@@ -15,11 +15,11 @@
         <div class="header__group">
           <nav class="header__center">
             <ul class="navbar">
-              <li class="navbar__item"><a class="navbar__link" href="#" data-scroll-to="">About</a></li>
-              <li class="navbar__item"><a class="navbar__link" href="#" data-scroll-to="">Trading Desk</a></li>
-              <li class="navbar__item"><a class="navbar__link" href="#" data-scroll-to="">DeFi Solutions</a></li>
-              <li class="navbar__item"><a class="navbar__link" href="#" data-scroll-to="">Blog</a></li>
-              <li class="navbar__item"><a class="navbar__link" href="#" data-scroll-to="">Contact</a></li>
+              <li class="navbar__item"><a class="navbar__link" href="about.html" data-scroll-to="">About</a></li>
+              <li class="navbar__item"><a class="navbar__link" href="#trading" data-scroll-to="">Trading Desk</a></li>
+              <li class="navbar__item"><a class="navbar__link" href="#defi" data-scroll-to="">DeFi Solutions</a></li>
+              <li class="navbar__item"><a class="navbar__link" href="https://medium.com/orion-protocol" data-scroll-to="">Blog</a></li>
+              <li class="navbar__item"><a class="navbar__link" href="#contacts" data-scroll-to="">Contact</a></li>
             </ul>
           </nav>
           <div class="header__right">
@@ -212,9 +212,9 @@
       </section>
       <!-- end advisors-->
     </main>
-    <footer class="footer">
+    <footer class="footer" id="contacts">
       <div class="footer__content">
-        <div class="footer__top"><a class="logo" href="#"><img src="img/logo.png" alt=""/></a>
+        <div class="footer__top"><a class="logo" href="/"><img src="img/logo.png" alt=""/></a>
           <div class="lang">
             <div class="lang__flag"><img src="img/US.svg" alt="United States"/></div>
           </div>
@@ -223,28 +223,26 @@
             <button class="btn" type="submit"> <i class="icon-caret"></i></button>
           </div>
           <ul class="soc">
-            <li class="soc__item"><a class="icon-telegram" href="#"></a></li>
-            <li class="soc__item"><a class="icon-bitcoin" href="#"></a></li>
-            <li class="soc__item"><a class="icon-facebook" href="#"></a></li>
-            <li class="soc__item"><a class="icon-github" href="#"></a></li>
-            <li class="soc__item"><a class="icon-linkedin" href="#"></a></li>
-            <li class="soc__item"><a class="icon-youtube" href="#"></a></li>
-            <li class="soc__item"><a class="icon-twitter" href="#"></a></li>
+            <li class="soc__item"><a class="icon-telegram" href="https://t.me/orionprotocol"></a></li>
+            <li class="soc__item"><a class="icon-bitcoin" href="https://bitcointalk.org/index.php?topic=5153861.new"></a></li>
+            <li class="soc__item"><a class="icon-github" href="https://github.com/orionprotocol" target="_blank"></a></li>
+            <li class="soc__item"><a class="icon-linkedin" href="https://www.linkedin.com/company/orion-protocol" target="_blank"></a></li>
+            <li class="soc__item"><a class="icon-youtube" href="https://www.youtube.com/channel/UCgz77eATRldOwfvgYvw8lcw" target="_blank"></a></li>
+            <li class="soc__item"><a class="icon-twitter" href="https://twitter.com/orion_protocol" target="_blank"></a></li>
           </ul>
         </div>
         <div class="footer__nav">
           <ul class="navbar">
-            <li class="navbar__item"><a class="navbar__link" href="#">Home</a></li>
-            <li class="navbar__item"><a class="navbar__link" href="#">About</a></li>
-            <li class="navbar__item"><a class="navbar__link" href="#">Trading desk</a></li>
-            <li class="navbar__item"><a class="navbar__link" href="#">DeFi Solutions</a></li>
-            <li class="navbar__item"><a class="navbar__link" href="#">Blog</a></li>
-            <li class="navbar__item"><a class="navbar__link" href="#">Contact</a></li>
+            <li class="navbar__item"><a class="navbar__link" href="#home">Home</a></li>
+            <li class="navbar__item"><a class="navbar__link" href="about.html">About</a></li>
+            <li class="navbar__item"><a class="navbar__link" href="#trading">Trading desk</a></li>
+            <li class="navbar__item"><a class="navbar__link" href="#defi">DeFi Solutions</a></li>
+            <li class="navbar__item"><a class="navbar__link" href="https://medium.com/orion-protocol">Blog</a></li>
+            <li class="navbar__item"><a class="navbar__link" href="#contacts">Contact</a></li>
           </ul>
         </div>
         <div class="footer__bottom">
-          <div class="footer__copy">© Orion 2019, All rights reserved.</div><a href="#">Terms & Conditions</a><a href="#">Privacy Policy</a><a href="#">Sales & Refunds</a><a href="#">Legal</a>
-          <div class="footer__dev">made by <a href="#" target="_blank">roobinium</a></div>
+          <div class="footer__copy">© Orion 2019, All rights reserved.</div><a href="#">Terms & Conditions</a><a href="#">Privacy Policy</a><a href="#">Legal</a>
         </div>
       </div>
     </footer>
@@ -260,10 +258,10 @@
           <form class="form" action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSdgXqNZyAxQ6dp85Nd57IOboR0D1G6gnCb0vEkns7KGq2z8OA/formResponse" method="post">
             <input class="ja_antispam" type="hidden"/>
             <div class="form__row">
-              <input type="email" data-email="" name="emailAddress" placeholder="Email" required="required"/>
+              <input type="text" name="entry.586847119" placeholder="Name" required="required"/>
             </div>
             <div class="form__row">
-              <input type="text" name="entry.586847119" placeholder="Name" required="required"/>
+              <input type="email" data-email="" name="emailAddress" placeholder="Email" required="required"/>
             </div>
             <div class="form__row">
               <select name="entry.1458313461" required="required" data-placeholder="Select Subject">
@@ -292,15 +290,16 @@
     <div class="modal-dialog">
       <div class="modal-content"><a class="modal-close" href="#" data-dismiss="modal"></a>
         <div class="modal-header">
-          <div class="modal-title">For Investors</div>
+          <div class="modal-title">Request Beta Access</div>
         </div>
         <div class="modal-body">
           <form class="form" action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSfF6jVO_wTHWtrJEa0nP6MVtNU77utWHXOiJRT83Y2wugU8mQ/formResponse" method="post">
-            <div class="form__row">
-              <input type="email" data-email="" name="emailAddress" placeholder="Email" required="required"/>
-            </div>
+            <input class="ja_antispam" type="hidden"/>
             <div class="form__row">
               <input type="text" name="entry.38228649" placeholder="Name" required="required"/>
+            </div>
+            <div class="form__row">
+              <input type="email" data-email="" name="emailAddress" placeholder="Email" required="required"/>
             </div>
             <div class="form__row">
               <input type="text" name="entry.1131517323" placeholder="Telegram Username"/>
@@ -356,6 +355,7 @@
   <!-- End modal forInvestors-->
   <script src="js/jquery.js"></script>
   <script src="js/modal.js"></script>
+  <script src="js/slick.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/select2@4.0.12/dist/js/select2.min.js"></script>
   <script src="js/function.js?1.4"></script>
 </html>
