@@ -219,11 +219,19 @@
     }
 
     &__title {
-        font-size: 3em;
+        font-size: 2.5em;
         font-weight: 700;
-        letter-spacing: -0.0425em;
+        letter-spacing: 0.1em;
         line-height: 1.4;
-        margin: 0 0 1em;
+        margin: 0 0 2rem;
+    }
+
+    &__sub-title {
+        font-size: 2em;
+        font-weight: 600;
+        letter-spacing: 0.1em;
+        line-height: 1.4;
+        margin: 0.5rem 0 1rem;
     }
 
 }
@@ -406,6 +414,10 @@
         line-height: 1.5;
     }
 
+    .features__left .section__title {
+        line-height: 1.8;
+    }
+
 }
 
 .earning {
@@ -474,6 +486,7 @@
 
         @media (min-width: 768px) {
             flex-direction: row;
+            align-items: center;
             // padding: 0;
         }
     }
@@ -494,6 +507,14 @@
         color: rgba(224, 224, 255, 0.6);
         font-size: 1.25em;
         font-weight: 500;
+        line-height: 1.8;
+        margin-bottom: 1.5rem;
+    }
+
+    &__sub-text {
+        color: rgba(224, 224, 255, 0.6);
+        font-size: 1em;
+        font-weight: 400;
         line-height: 1.8;
         margin-bottom: 1.5em;
     }
