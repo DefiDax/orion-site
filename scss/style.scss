@@ -1247,10 +1247,16 @@
     .slick {
         &-slide {
             outline: 0;
-            margin: 0 1em;
+            height: 100%;
+            // float: none;
+            margin: 0 3em;
             // opacity: 0;
             padding-bottom: 2em;
             transition: opacity 0.3;
+
+            @media (min-width: 768px) {
+                margin: 0 1em;
+            }
         }
 
         &-list {
@@ -1266,13 +1272,16 @@
         &-arrow {
             position: absolute;
             border: none;
-            font-size: 0;
+            font-size: 1em;
             background-color: transparent;
-            width: 30px;
-            height: 30px;
+            width: 2em;
+            height: 2em;
             top: 50%;
+            margin-top: -1em;
             cursor: pointer;
             transition: all 0.3s;
+            color: transparent;
+            z-index: 10;
 
             &:hover {
                 opacity: 0.8;
@@ -1284,23 +1293,23 @@
                 position: absolute;
                 left: 0;
                 color: #fff;
-                border: 2px solid;
+                border-top: 0.2em solid;
                 width: 100%;
             }
 
             &:before {
-                top: 2px;
+                top: 0;
                 transform: rotate(45deg);
             }
 
             &:after {
-                bottom: 2px;
+                bottom: 0.4em;
                 transform: rotate(-45deg);
             }
         }
 
         &-next {
-            right: 0;
+            right: 1em;
 
             &:before {}
         }
