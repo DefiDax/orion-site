@@ -157,7 +157,7 @@ function startSlider() {
 
     if (!slider.hasClass('slick-initialized')) {
         slider.slick({
-            arrows: false,
+            arrows: true,
             pauseOnFocus: false,
             pauseOnHover: false,
             // adaptiveHeight: true,
@@ -177,7 +177,7 @@ function startSlider() {
         });
     }
     if (pScroll > product) {
-        if (!slider.hasClass('started')) {
+        /*if (!slider.hasClass('started')) {
             // console.log('start');
             slider
                 .slick('setPosition', 0)
@@ -186,7 +186,7 @@ function startSlider() {
                     slider
                         .slick('slickSetOption', {'autoplay': true}, true);
                 }
-        }
+        }*/
     }
 }
 
