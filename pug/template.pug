@@ -5,9 +5,38 @@ html(lang="en")
         meta(charset="UTF-8")
         meta(name="viewport", content="width=device-width, initial-scale=1.0")
         meta(http-equiv="X-UA-Compatible", content="ie=edge")
-        title ORION
+        title ORION - The Liquidity Aggregator Protocol
+        meta(content="DeFi solutions, cross chain trading, omni-exchange accessibility and liquidity." name="description")
+        meta(content="website" property="og:type")
+        meta(content="en-US" property="og:locale")
+        meta(content="ORION - The Liquidity Aggregator Protocol" property="og:title")
+        meta(content="DeFi solutions, cross chain trading, omni-exchange accessibility and liquidity." property="og:description")
+        meta(content="https://orionprotocol.io/orion_home.jpg" property="og:image")
+        meta(content="https://orionprotocol.io/orion_home.jpg" property="og:image:secure_url")
+        meta(content="512" property="og:image:width")
+        meta(content="512" property="og:image:height")
+        meta(content="https://orionprotocol.io/" property="og:url")
+        meta(content="The Orion Protocol" property="og:site_name")
 
-        link(rel="stylesheet", type="text/css", href="css/style.css?"+version+"")
+        meta(content="summary" property="twitter:card")
+        meta(content="ORION - The Liquidity Aggregator Protocol" property="twitter:title")
+        meta(content="DeFi solutions, cross chain trading, omni-exchange accessibility and liquidity" property="twitter:description")
+        meta(content="https://orionprotocol.io/orion_home.jpg" property="twitter:image")
+        meta(content="@orion_protocol" name="twitter:site")
+        meta(content="@orion_protocol" name="twitter:creator")
+
+        link(rel="stylesheet", type="text/css", href="css/style.css?" + version + "")
+        link(rel="shortcut icon" href="/favicon.ico" type="image/x-icon" )
+        link(rel="apple-touch-icon" href="/apple-touch-icon.png" )
+        link(rel="apple-touch-icon" sizes="57x57" href="/apple-touch-icon-57x57.png" )
+        link(rel="apple-touch-icon" sizes="72x72" href="/apple-touch-icon-72x72.png" )
+        link(rel="apple-touch-icon" sizes="76x76" href="/apple-touch-icon-76x76.png" )
+        link(rel="apple-touch-icon" sizes="114x114" href="/apple-touch-icon-114x114.png" )
+        link(rel="apple-touch-icon" sizes="120x120" href="/apple-touch-icon-120x120.png" )
+        link(rel="apple-touch-icon" sizes="144x144" href="/apple-touch-icon-144x144.png" )
+        link(rel="apple-touch-icon" sizes="152x152" href="/apple-touch-icon-152x152.png" )
+        link(rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon-180x180.png" )
+
     body
         header.header
             .header__content
@@ -17,18 +46,7 @@ html(lang="en")
                         img(src="img/logo.png", alt="ORION")
                 .header__group
                     nav.header__center
-                        ul.navbar
-                            -var nav = [{name: 'About', href: 'about.html'}, {name: 'Trading Desk', href: '#trading'}, {name: 'DeFi Solutions', href: '#defi'}, {name: 'Blog', href: 'https://medium.com/orion-protocol'}, {name: 'Contact', href: '#contacts'}];
-                            each value in nav
-                                li.navbar__item
-                                    a.navbar__link(href= value.href data-scroll-to="")= value.name
-                    .header__right
-                        .lang
-                            .lang__flag
-                                img(src="img/US.svg", alt="United States")
-                            |EN
-                        .header__action
-                            button.btn(data-toggle="modal" data-target="#callback") Get in Touch
+                        block navbar
 
         main.main_content
             block content
@@ -38,51 +56,22 @@ html(lang="en")
                 .footer__top
                     a.logo(href="/")
                         img(src="img/logo.png", alt="")
-                    .lang
-                        .lang__flag
-                            img(src="img/US.svg", alt="United States")
-                    .form.form_inline
-                        input(type="text" placeholder="Email")
-                        button.btn(type="submit") 
-                            i.icon-caret
 
                     ul.soc
                         li.soc__item
                             a.icon-telegram(href="https://t.me/orionprotocol")
                         li.soc__item
-                            a.icon-bitcoin(href="https://bitcointalk.org/index.php?topic=5153861.new")
-                        li.soc__item
                             a.icon-github(href="https://github.com/orionprotocol" target="_blank")
-                        //- li.soc__item
-                            a.icon-facebook(href="")
                         li.soc__item
                             a.icon-linkedin(href="https://www.linkedin.com/company/orion-protocol" target="_blank")
-                        li.soc__item
-                            a.icon-youtube(href="https://www.youtube.com/channel/UCgz77eATRldOwfvgYvw8lcw" target="_blank")
                         li.soc__item
                             a.icon-twitter(href="https://twitter.com/orion_protocol" target="_blank")
 
                 .footer__nav
-                    ul.navbar
-                        li.navbar__item
-                            a.navbar__link(href="#home") Home
-                        li.navbar__item
-                            a.navbar__link(href="about.html") About
-                        li.navbar__item
-                            a.navbar__link(href="#trading") Trading desk
-                        li.navbar__item
-                            a.navbar__link(href="#defi") DeFi Solutions
-                        li.navbar__item
-                            a.navbar__link(href="https://medium.com/orion-protocol") Blog
-                        li.navbar__item
-                            a.navbar__link(href="#contacts") Contact
+                    block navbar
 
                 .footer__bottom
-                    .footer__copy © Orion 2019, All rights reserved.
-                    a(href="#") Terms & Conditions
-                    a(href="#") Privacy Policy
-                    //- a(href="#") Sales & Refunds
-                    a(href="#") Legal
+                    .footer__copy © Orion 2020, All rights reserved.
                     //- .footer__dev made by 
                         a(href="#", target="_blank") roobinium
 

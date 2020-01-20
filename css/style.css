@@ -731,6 +731,9 @@ body {
     margin-right: 2em;
   }
 }
+.navbar__item:last-child {
+  margin-right: 0;
+}
 .navbar__link {
   font-size: 0.813em;
   font-weight: 500;
@@ -1777,6 +1780,9 @@ html[data-browser*=flexible] .grid_nowrap {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
 }
 @media (min-width: 768px) {
@@ -1785,7 +1791,6 @@ html[data-browser*=flexible] .grid_nowrap {
         -ms-flex: none;
             flex: none;
     width: 59.8%;
-    padding-bottom: 7.5em;
   }
   .traiding__img img {
     display: block;
@@ -1813,6 +1818,7 @@ html[data-browser*=flexible] .grid_nowrap {
 }
 .traiding__subtitle .highlight {
   color: #00bbff;
+  font-style: italic;
 }
 .traiding__text {
   font-size: 1.1em;
@@ -1999,7 +2005,7 @@ html[data-browser*=flexible] .grid_nowrap {
 @media (min-width: 768px) {
   .product {
     margin-top: -4.8em;
-    padding: 7.5em 0 5.2em;
+    padding: 7.5em 0 6em;
     background-size: 100% 100%;
   }
 }
@@ -2011,6 +2017,11 @@ html[data-browser*=flexible] .grid_nowrap {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+}
+@media (max-width: 767px) {
+  .product__content {
+    padding-bottom: 4em;
+  }
 }
 @media (min-width: 768px) {
   .product__content {
@@ -2032,7 +2043,7 @@ html[data-browser*=flexible] .grid_nowrap {
     -webkit-box-ordinal-group: 1;
         -ms-flex-order: 0;
             order: 0;
-    width: 44.9%;
+    width: 40%;
   }
 }
 .product__descr__title {
@@ -2044,6 +2055,10 @@ html[data-browser*=flexible] .grid_nowrap {
   font-weight: 500;
   line-height: 1.8;
   margin-bottom: 1.5rem;
+}
+.product__descr .product__action {
+  text-align: left;
+  margin-top: 2em;
 }
 .product__text {
   color: rgba(224, 224, 255, 0.6);
@@ -2059,22 +2074,41 @@ html[data-browser*=flexible] .grid_nowrap {
   line-height: 1.8;
   margin-bottom: 1.5em;
 }
+.product__item .features__icon {
+  width: 4rem;
+  height: 4rem;
+  margin-bottom: 0;
+}
 .product__item .features__icon img {
-  max-width: 60%;
+  max-width: 46%;
+}
+.product__solution {
+  -webkit-box-shadow: 0 0.5em 0.5em -0.25em rgba(20, 16, 41, 0.24), 0 0.125em 0.25em -0.062em rgba(20, 16, 41, 0.24), 0 0 0.063em rgba(20, 16, 41, 0.4);
+          box-shadow: 0 0.5em 0.5em -0.25em rgba(20, 16, 41, 0.24), 0 0.125em 0.25em -0.062em rgba(20, 16, 41, 0.24), 0 0 0.063em rgba(20, 16, 41, 0.4);
+  border-radius: 1.5em;
+  background-color: rgba(51, 51, 75, 0.24);
 }
 @media (min-width: 768px) {
   .product__solution {
-    width: 44.9%;
-    padding-bottom: 1.9em;
+    width: 60%;
   }
 }
 .product__solution__header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 1em 0;
+}
+.product__solution__title {
   color: #00bbff;
   font-size: 1.5em;
   font-weight: 500;
   letter-spacing: 0.1em;
   line-height: 1.4;
-  margin: 2rem 0 1.5rem;
+  margin-left: 1em;
   text-transform: uppercase;
 }
 .product__solution__text {
@@ -2104,7 +2138,7 @@ html[data-browser*=flexible] .grid_nowrap {
       -ms-flex-align: center;
           align-items: center;
   position: relative;
-  opacity: 0.6;
+  opacity: 1;
 }
 @media (min-width: 768px) {
   .product__list {
@@ -2114,6 +2148,10 @@ html[data-browser*=flexible] .grid_nowrap {
     bottom: 0;
     left: 0;
   }
+}
+.product__action {
+  text-align: center;
+  margin-top: 4em;
 }
 .product__name {
   cursor: pointer;
@@ -2408,8 +2446,12 @@ html[data-browser*=flexible] .grid_nowrap {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
@@ -2760,34 +2802,33 @@ html[data-browser*=flexible] .grid_nowrap {
 }
 
 .product__slider {
-  margin: 0 -1em;
+  margin: 0;
   display: none;
   position: relative;
-}
-.product__slider:after {
-  content: "";
-  position: absolute;
-  right: 0;
-  top: 0;
-  bottom: 0;
-  width: 1em;
-  background-color: #1f2036;
 }
 .product__slider.slick-initialized {
   display: block;
 }
+.product__slider .slick-track {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
 .product__slider .slick-slide {
   outline: 0;
   height: 100%;
-  margin: 0 3em;
-  padding-bottom: 2em;
+  margin: 0 5em;
+  padding-bottom: 1em;
   -webkit-transition: opacity 0.3;
   -o-transition: opacity 0.3;
   transition: opacity 0.3;
 }
-@media (min-width: 768px) {
+@media (max-width: 767px) {
   .product__slider .slick-slide {
-    margin: 0 3em;
+    margin: 0 3.5em;
   }
 }
 .product__slider .slick-list {
@@ -2819,8 +2860,8 @@ html[data-browser*=flexible] .grid_nowrap {
 .product__slider .slick-arrow:after, .product__slider .slick-arrow:before {
   content: "";
   position: absolute;
-  left: 0;
-  color: #fff;
+  left: 0em;
+  color: #00bbff;
   border-top: 0.2em solid;
   width: 100%;
 }
@@ -2831,25 +2872,35 @@ html[data-browser*=flexible] .grid_nowrap {
           transform: rotate(45deg);
 }
 .product__slider .slick-arrow:after {
-  bottom: 0.4em;
+  bottom: 0.5em;
   -webkit-transform: rotate(-45deg);
       -ms-transform: rotate(-45deg);
           transform: rotate(-45deg);
 }
 .product__slider .slick-next {
-  right: 1em;
+  right: 2em;
+}
+@media (max-width: 767px) {
+  .product__slider .slick-next {
+    right: 0.5em;
+  }
 }
 .product__slider .slick-prev {
-  left: 0;
+  left: 2em;
   -webkit-transform: rotate(180deg);
       -ms-transform: rotate(180deg);
           transform: rotate(180deg);
+}
+@media (max-width: 767px) {
+  .product__slider .slick-prev {
+    left: 0.5em;
+  }
 }
 .product__slider .slick-dots {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  margin: 0 1em 4em;
+  margin: 0 1em 2em;
   padding: 0;
   list-style: none;
   -webkit-box-pack: center;
@@ -2859,47 +2910,40 @@ html[data-browser*=flexible] .grid_nowrap {
 .product__slider .slick-dots li {
   position: relative;
   cursor: pointer;
+  width: 1em;
+  height: 1em;
+  background-color: rgba(255, 255, 255, 0.6);
+  border-radius: 50%;
+  margin: 0 0.5em;
+  /*@media (min-width: 768px) {
+      margin: 0 0.1em;
+      padding: 1em 0;
+      flex-grow: 1;
+
+      &:after {
+          content: '';
+          position: absolute;
+          top: 0.9em;
+          left: 0;
+          bottom: 0.9em;
+          background-color: #00bbff;
+          width: 0;
+      }
+
+      &:before {
+          content: '';
+          position: absolute;
+          top: 0.9em;
+          left: 0;
+          bottom: 0.9em;
+          background-color: rgba($color_withe, 0.1);
+          width: 100%;
+      }
+
+  }*/
 }
-@media (max-width: 767px) {
-  .product__slider .slick-dots li {
-    width: 1em;
-    height: 1em;
-    background-color: rgba(255, 255, 255, 0.6);
-    border-radius: 50%;
-    margin: 0 0.5em;
-  }
-}
-@media (min-width: 768px) {
-  .product__slider .slick-dots li {
-    margin: 0 0.1em;
-    padding: 1em 0;
-    -webkit-box-flex: 1;
-        -ms-flex-positive: 1;
-            flex-grow: 1;
-  }
-  .product__slider .slick-dots li:after {
-    content: "";
-    position: absolute;
-    top: 0.9em;
-    left: 0;
-    bottom: 0.9em;
-    background-color: #00bbff;
-    width: 0;
-  }
-  .product__slider .slick-dots li:before {
-    content: "";
-    position: absolute;
-    top: 0.9em;
-    left: 0;
-    bottom: 0.9em;
-    background-color: rgba(255, 255, 255, 0.1);
-    width: 100%;
-  }
-}
-@media (max-width: 767px) {
-  .product__slider .slick-dots li.slick-active {
-    background-color: #00bbff;
-  }
+.product__slider .slick-dots li.slick-active {
+  background-color: #00bbff;
 }
 @media (min-width: 768px) {
   .product__slider .slick-dots li.slick-active:after {

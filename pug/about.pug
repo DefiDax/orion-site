@@ -8,7 +8,11 @@ block content
                 .fScreen__descr.fScreen__descr_noimg
                     .section__name
                     h1.section__title ABOUT US
-                    .fScreen__sub The team and advisors to get the job done, Orion blah blah blah blah blah blah blah.
+                    .fScreen__about
+                        p.fScreen__about__header The future is decentralized. And so are we.
+                        p.fScreen__about__strong WE ARE ORION, the only DeFi platform creating a truly decentralized crypto landscape for businesses + consumers.
+                        p.fScreen__about__text <b>We innovate. We evolve. But we stay true to the fundamentals of crypto.</b>
+                        p.fScreen__about__text <b>Our trading terminal aggregates the liquidity of the entire crypto market into one place,</b> embedding robust tools for the most intelligent trades at the best price, every time. <b>Our Shared Liquidity Pool underpins our DeFi solutions,</b> built to provide the crypto market with the liquidity, accessibility, and growth it needs to succeed. <b>And at our core? Our ORN token,</b> the invaluable fuel powering our ecosystem.
 
     // end fScreen
 
@@ -51,6 +55,35 @@ block content
                 .team__item
                     .team__top
                         .team__left
+                            .team__name Timothea Horwell
+                            .team__exp CHIEF MARKETING OFFICER
+                            a.icon-linkedin(href="https://www.linkedin.com/in/timotheahorwell")
+                        .team__img
+                            img(src="img/team/Timothea.png", alt="")
+                    .team__short Timothea is a commercially-driven marketing and brand strategist, founding and leading the commercially successful Marketing & Research division at Telefonica...
+                    .team__full
+                        p Timothea Horwell is a commercially-driven marketing strategist with a focus on driving business growth and revenue. From developing business strategies for clients at a start-up incubator through to founding and leading the commercially successful Marketing & Research division at Telefonica, Timothea is passionate about growing businesses in the tech space - from start-up to scale-up to global conglomerate.
+                    .team__bottom
+                        a.team__more(href="#" data-more="Read more" data-less="Read less") Read more
+
+                .team__item
+                    .team__top
+                        .team__left
+                            .team__name Yanush Ali
+                            .team__exp Chief Strategy Officer
+                            a.icon-linkedin(href="https://www.linkedin.com/in/yanush-ali-72056039")
+                        .team__img
+                            img(src="img/team/Yanush.jpg", alt="")
+                    .team__short Co-Founder and Managing Partner of Kanix, and is an experienced strategic fundraising consultant, provided marketing for Holochain, Morpheus Network, and Pchain ...
+                    .team__full
+                        p Yanush is a Co-Founder and Managing Partner of Kanix, and is an experienced strategic fundraising consultant and cryptocurrency marketing expert whose specialty is advising and generating awareness for projects before and after their token sale. Yanush provided marketing and expertise for over eighteen noteworthy crypto projects including Holochain, Morpheus Network, and Pchain. He is also deeply ingrained and highly active in the crypto investment space, and has created and organically grew vibrant discussion communities to over 1,000 members.
+                        p “When pitching the idea of the product to users I only use several word: ORION is all-in-one platform that you ever need for blockchain investment and trading”.
+                    .team__bottom
+                        a.team__more(href="#" data-more="Read more" data-less="Read less") Read more
+
+                .team__item
+                    .team__top
+                        .team__left
                             .team__name Eduardo Moreira
                             .team__exp Head of Development
                             a.icon-linkedin(href="https://www.linkedin.com/in/itdirectoreduardomoreira")
@@ -60,21 +93,6 @@ block content
                     .team__full
                         p Eduardo holds an MBA from the Nottingham University Business School and is the CEO and founder of the Development firm EYSS, which is closely meshed within the Holochain ecosystem with intimate links to the Holo team. Eduardo and EYSS is responsible for being the leaders of the Holochain movement in Latin Americ. He also has many years of experience as an IT Director in various multinational companies but is now focused on helping others achieve efficiencies and positive market disruptions by using advanced technology. 
                         p “ORION significantly lowers the barrier to starting investing in cryptocurrencies and blockchain projects by removing the difficulties of finding the most promising instruments, creating wallets, transferring funds and controlling your earnings”.
-                    .team__bottom
-                        a.team__more(href="#" data-more="Read more" data-less="Read less") Read more
-
-                .team__item
-                    .team__top
-                        .team__left
-                            .team__name Yanush Ali
-                            .team__exp Director of Communications
-                            a.icon-linkedin(href="https://www.linkedin.com/in/yanush-ali-72056039")
-                        .team__img
-                            img(src="img/team/Yanush.jpg", alt="")
-                    .team__short Co-Founder and Managing Partner of Kanix, and is an experienced strategic fundraising consultant, provided marketing for Holochain, Morpheus Network, and Pchain ...
-                    .team__full
-                        p Yanush is a Co-Founder and Managing Partner of Kanix, and is an experienced strategic fundraising consultant and cryptocurrency marketing expert whose specialty is advising and generating awareness for projects before and after their token sale. Yanush provided marketing and expertise for over eighteen noteworthy crypto projects including Holochain, Morpheus Network, and Pchain. He is also deeply ingrained and highly active in the crypto investment space, and has created and organically grew vibrant discussion communities to over 1,000 members. 
-                        p “When pitching the idea of the product to users I only use several word: ORION is all-in-one platform that you ever need for blockchain investment and trading”.
                     .team__bottom
                         a.team__more(href="#" data-more="Read more" data-less="Read less") Read more
 
@@ -175,3 +193,14 @@ block content
                         a.team__more(href="#" data-more="Read more" data-less="Read less") Read more
 
     // end advisors
+
+block navbar
+    ul.navbar
+        li.navbar__item
+            a.navbar__link(href="/") Home
+        li.navbar__item
+            a.navbar__link(href="about.html") About
+        li.navbar__item
+            a.navbar__link(href="https://medium.com/orion-protocol") Blog
+        li.navbar__item
+            a.navbar__link(href="#contacts", data-toggle="modal" data-target="#callback") Contact

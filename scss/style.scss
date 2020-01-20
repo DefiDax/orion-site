@@ -253,6 +253,7 @@
 
         @media (min-width: 768px) {
             display: flex;
+            align-items: center;
         }
     }
 
@@ -261,7 +262,6 @@
         @media (min-width: 768px) {
             flex: none;
             width: 59.8%;
-            padding-bottom: 7.5em;
 
             img {
                 display: block;
@@ -294,6 +294,7 @@
 
         .highlight {
             color: #00bbff;
+            font-style: italic;
         }
     }
 
@@ -503,13 +504,17 @@
 
     @media (min-width: 768px) {
         margin-top: -4.8em;
-        padding: 7.5em 0 5.2em;
+        padding: 7.5em 0 6em;
         background-size: 100% 100%;
     }
 
     &__content {
         display: flex;
         flex-direction: column;
+
+        @media (max-width: 767px) {
+            padding-bottom: 4em;
+        }
 
         @media (min-width: 768px) {
             flex-direction: row;
@@ -524,7 +529,7 @@
         @media (min-width: 768px) {
             padding-right: 4em;
             order: 0;
-            width: 44.9%;
+            width: 40%;
         }
 
         &__title {
@@ -537,6 +542,11 @@
             font-weight: 500;
             line-height: 1.8;
             margin-bottom: 1.5rem;
+        }
+
+        .product__action {
+            text-align: left;
+            margin-top: 2em;
         }
     }
 
@@ -557,27 +567,39 @@
     }
 
     &__item {
+        .features__icon {
+            width: 4rem;
+            height: 4rem;
+            margin-bottom: 0;
+        }
         .features__icon img {
-            max-width: 60%;
+            max-width: 46%;
         }
     }
 
     &__solution {
-        //flex: none;
-        //position: relative;
+
+        box-shadow: 0 0.5em 0.5em -0.25em rgba(20, 16, 41, 0.24), 0 0.125em 0.25em -0.062em rgba(20, 16, 41, 0.24), 0 0 0.063em rgba(20, 16, 41, 0.4);
+        border-radius: 1.5em;
+        background-color: rgba(51, 51, 75, 0.24);
 
         @media (min-width: 768px) {
-            width: 44.9%;
-            padding-bottom: 1.9em;
+            width: 60%;
         }
 
         &__header {
+            display: flex;
+            align-items: center;
+            margin: 1em 0;
+        }
+
+        &__title {
             color: #00bbff;
             font-size: 1.5em;
             font-weight: 500;
             letter-spacing: 0.1em;
             line-height: 1.4;
-            margin: 2rem 0 1.5rem;
+            margin-left: 1em;
             text-transform: uppercase;
         }
 
@@ -606,7 +628,7 @@
         justify-content: center;
         align-items: center;
         position: relative;
-        opacity: 0.6;
+        opacity: 1;
     }
 
     &__list {
@@ -620,6 +642,10 @@
         }
     }
 
+    &__action {
+        text-align: center;
+        margin-top: 4em;
+    }
     &__name {
         cursor: pointer;
         padding: 0.8em 1.6em;
@@ -901,7 +927,8 @@
     .navbar {
         @media (max-width: 767px) {
             display: flex;
-            flex-wrap: wrap;
+            flex-direction: column;
+            flex-wrap: nowrap;
             justify-content: space-between;
         }
 
@@ -1281,44 +1308,31 @@
 }
 
 .product__slider {
-    margin: 0 -1em;
+    margin: 0;
     display: none;
     position: relative;
-
-    @media (min-width: 768px) {
-        // margin: 0 -1em;
-    }
-
-    &:after {
-        content: '';
-        position: absolute;
-        right: 0;
-        top: 0;
-        bottom: 0;
-        width: 1em;
-        background-color: #1f2036;
-
-        @media (min-width: 768px) {
-            // width: 1em;
-        }
-    }
 
     &.slick-initialized {
         display: block;
     }
 
     .slick {
+        &-track {
+            display: flex;
+            align-items: center;
+        }
+
         &-slide {
             outline: 0;
             height: 100%;
             // float: none;
-            margin: 0 3em;
+            margin: 0 5em;
             // opacity: 0;
-            padding-bottom: 2em;
+            padding-bottom: 1em;
             transition: opacity 0.3;
 
-            @media (min-width: 768px) {
-                margin: 0 3em;
+            @media (max-width: 767px) {
+                margin: 0 3.5em;
             }
         }
 
@@ -1354,8 +1368,8 @@
             &:before {
                 content: '';
                 position: absolute;
-                left: 0;
-                color: #fff;
+                left: 0em;
+                color: #00bbff;
                 border-top: 0.2em solid;
                 width: 100%;
             }
@@ -1366,19 +1380,24 @@
             }
 
             &:after {
-                bottom: 0.4em;
+                bottom: 0.5em;
                 transform: rotate(-45deg);
             }
         }
 
         &-next {
-            right: 1em;
-
+            right: 2em;
+            @media (max-width: 767px) {
+                right: 0.5em;
+            }
             &:before {}
         }
 
         &-prev {
-            left: 0;
+            left: 2em;
+            @media (max-width: 767px) {
+                left: 0.5em;
+            }
             transform: rotate(180deg);
 
             &:before {}
@@ -1386,7 +1405,7 @@
 
         &-dots {
             display: flex;
-            margin: 0 1em 4em;
+            margin: 0 1em 2em;
             padding: 0;
             list-style: none;
             justify-content: center;
@@ -1400,15 +1419,15 @@
                 // margin: 0 0.1em;
                 cursor: pointer;
 
-                @media (max-width: 767px) {
+                //@media (max-width: 767px) {
                     width: 1em;
                     height: 1em;
                     background-color: rgba($color_withe, 0.6);
                     border-radius: 50%;
                     margin: 0 0.5em;
-                }
+                //}
 
-                @media (min-width: 768px) {
+                /*@media (min-width: 768px) {
                     margin: 0 0.1em;
                     padding: 1em 0;
                     flex-grow: 1;
@@ -1433,12 +1452,12 @@
                         width: 100%;
                     }
 
-                }
+                }*/
 
                 &.slick-active {
-                    @media (max-width: 767px) {
+                    //@media (max-width: 767px) {
                         background-color: #00bbff;
-                    }
+                    //}
 
                     &:after {
                         // transition: width 6s;

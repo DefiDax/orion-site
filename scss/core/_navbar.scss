@@ -73,6 +73,10 @@
 		}
 	}
 
+	&__item:last-child {
+		margin-right: 0;
+	}
+
 	&__link {
 		font-size: 0.813em;
 		font-weight: 500;
