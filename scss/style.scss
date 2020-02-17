@@ -147,7 +147,8 @@
 
         @media (min-width: 768px) {
             padding-top: 9em;
-            max-width: 45%;
+            margin-right: 5em;
+            max-width: 26em;
             order: 0;
             &_noimg {
                 padding-top: 6em;
@@ -518,22 +519,22 @@
 
         @media (min-width: 768px) {
             flex-direction: row;
-            align-items: flex-start;
+            align-items: center;
             // padding: 0;
         }
     }
 
     &__descr {
-        padding: 2em 0 4em 0;
+        margin-top: -3em;
+        padding: 2em 0 2em 0;
 
         @media (min-width: 768px) {
-            padding-right: 4em;
+            padding: 0 5em 0 0;
             order: 0;
-            width: 40%;
+            width: 55%;
         }
 
         &__title {
-            margin-top: 2.15em;
         }
 
         &__text {
@@ -571,6 +572,7 @@
             width: 4rem;
             height: 4rem;
             margin-bottom: 0;
+            flex-shrink: 0;
         }
         .features__icon img {
             max-width: 46%;
@@ -579,12 +581,8 @@
 
     &__solution {
 
-        box-shadow: 0 0.5em 0.5em -0.25em rgba(20, 16, 41, 0.24), 0 0.125em 0.25em -0.062em rgba(20, 16, 41, 0.24), 0 0 0.063em rgba(20, 16, 41, 0.4);
-        border-radius: 1.5em;
-        background-color: rgba(51, 51, 75, 0.24);
-
         @media (min-width: 768px) {
-            width: 60%;
+            width: 55%;
         }
 
         &__header {
@@ -1080,6 +1078,7 @@
     &__img {
         order: 2;
         flex: none;
+        flex-shrink: 0;
         width: 30%;
         border-radius: 50%;
         overflow: hidden;
@@ -1311,6 +1310,7 @@
     margin: 0;
     display: none;
     position: relative;
+    //padding-bottom: 2em;
 
     &.slick-initialized {
         display: block;
@@ -1325,14 +1325,11 @@
         &-slide {
             outline: 0;
             height: 100%;
-            // float: none;
-            margin: 0 5em;
-            // opacity: 0;
-            padding-bottom: 1em;
+            padding: 2em 3em 2em 3em;
             transition: opacity 0.3;
 
             @media (max-width: 767px) {
-                margin: 0 3.5em;
+                //margin: 0 3.5em;
             }
         }
 
@@ -1340,6 +1337,13 @@
             // max-width: 740px;
             margin: auto;
             padding: 0;
+            box-shadow: 0 0.5em 0.5em -0.25em rgba(20, 16, 41, 0.24), 0 0.125em 0.25em -0.062em rgba(20, 16, 41, 0.24), 0 0 0.063em rgba(20, 16, 41, 0.4);
+            border-radius: 1.5em;
+            background-color: rgba(51, 51, 75, 0.24);
+
+            @media (max-width: 767px) {
+                //margin: 0 3em;
+            }
         }
 
         &-current {
@@ -1349,64 +1353,44 @@
         &-arrow {
             position: absolute;
             border: none;
-            font-size: 1em;
-            background-color: transparent;
-            width: 2em;
-            height: 2em;
+            font-size: 0.5em;
+            background: url("../img/arrow.svg") no-repeat  center center;
+            background-size: 2em 3em;
+            width: 4em;
+            height: 4em;
             top: 50%;
-            margin-top: -1em;
+            margin-top: -6em;
             cursor: pointer;
-            transition: all 0.3s;
             color: transparent;
             z-index: 10;
 
+            @media (max-width: 767px) {
+                margin-top: -6em;
+            }
             &:hover {
                 opacity: 0.8;
-            }
-
-            &:after,
-            &:before {
-                content: '';
-                position: absolute;
-                left: 0em;
-                color: #00bbff;
-                border-top: 0.2em solid;
-                width: 100%;
-            }
-
-            &:before {
-                top: 0;
-                transform: rotate(45deg);
-            }
-
-            &:after {
-                bottom: 0.5em;
-                transform: rotate(-45deg);
             }
         }
 
         &-next {
-            right: 2em;
+            right: -5em;
             @media (max-width: 767px) {
-                right: 0.5em;
+                right: 1em;
             }
-            &:before {}
+            transform: rotate(180deg);
         }
 
         &-prev {
-            left: 2em;
+            left: -5em;
             @media (max-width: 767px) {
-                left: 0.5em;
+                left: 1em;
             }
-            transform: rotate(180deg);
-
-            &:before {}
         }
 
         &-dots {
             display: flex;
-            margin: 0 1em 2em;
-            padding: 0;
+            margin: 0;
+            padding: 2em 0 2em 0;
             list-style: none;
             justify-content: center;
 
@@ -1418,41 +1402,12 @@
                 position: relative;
                 // margin: 0 0.1em;
                 cursor: pointer;
+                width: 0.5em;
+                height: 0.5em;
+                background-color: rgba($color_withe, 0.6);
+                border-radius: 50%;
+                margin: 0 0.5em;
 
-                //@media (max-width: 767px) {
-                    width: 1em;
-                    height: 1em;
-                    background-color: rgba($color_withe, 0.6);
-                    border-radius: 50%;
-                    margin: 0 0.5em;
-                //}
-
-                /*@media (min-width: 768px) {
-                    margin: 0 0.1em;
-                    padding: 1em 0;
-                    flex-grow: 1;
-
-                    &:after {
-                        content: '';
-                        position: absolute;
-                        top: 0.9em;
-                        left: 0;
-                        bottom: 0.9em;
-                        background-color: #00bbff;
-                        width: 0;
-                    }
-
-                    &:before {
-                        content: '';
-                        position: absolute;
-                        top: 0.9em;
-                        left: 0;
-                        bottom: 0.9em;
-                        background-color: rgba($color_withe, 0.1);
-                        width: 100%;
-                    }
-
-                }*/
 
                 &.slick-active {
                     //@media (max-width: 767px) {
