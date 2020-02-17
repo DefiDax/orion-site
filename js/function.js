@@ -295,7 +295,7 @@ formSubmit();
 function showConatactModal() {
     var hash = location.hash.replace('#', '');
 
-    if (hash == 'contact') {
+    if (hash == 'contacts') {
         $('#callback').modal('show');
     }
 }
