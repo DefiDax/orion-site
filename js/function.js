@@ -291,3 +291,12 @@ function formSubmit() {
 }
 
 formSubmit();
+
+function showConatactModal() {
+    var hash = location.hash.replace('#', '');
+
+    if (hash == 'contact') {
+        $('#callback').modal('show');
+    }
+}
+showConatactModal();
