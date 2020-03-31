@@ -2375,6 +2375,10 @@ html[data-browser*=flexible] .grid_nowrap {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 .footer__bottom a {
   color: inherit;
@@ -2382,6 +2386,7 @@ html[data-browser*=flexible] .grid_nowrap {
 }
 .footer__bottom a:hover {
   text-decoration: underline;
+  color: #ffffff;
 }
 @media (max-width: 767px) {
   .footer__bottom a {
@@ -2393,6 +2398,9 @@ html[data-browser*=flexible] .grid_nowrap {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
   }
+}
+.footer__email {
+  margin-bottom: 1em;
 }
 .footer__dev a {
   color: #ffffff;
@@ -2957,4 +2965,3 @@ html[data-browser*=flexible] .grid_nowrap {
 .logo img {
   height: 1.8em;
 }
-/*# sourceMappingURL=style.css.map */

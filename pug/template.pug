@@ -1,4 +1,4 @@
--var version = '1.4';
+-var version = '1.5';
 <!DOCTYPE html>
 html(lang="en")
     head
@@ -61,7 +61,7 @@ html(lang="en")
         main.main_content
             block content
 
-        footer.footer#contacts
+        footer.footer
             .footer__content
                 .footer__top
                     a.logo(href="/")
@@ -81,6 +81,7 @@ html(lang="en")
                     block navbar
 
                 .footer__bottom
+                    a.footer__email(href="mailto:info@orionprotocol.io") info@orionprotocol.io
                     .footer__copy © Orion 2020, All rights reserved.
                     //- .footer__dev made by 
                         a(href="#", target="_blank") roobinium
